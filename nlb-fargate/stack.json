@@ -1,0 +1,1325 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2020-12-09T14:12:59.59555Z",
+            "magic": "2f4aa5305780ac57d33f36df2f5c12f857dacccb60fbfcd2a2202621eba9c2af",
+            "version": "v2.15.4"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "pierskarsenbarg",
+                "project": "nlb-fargate",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "nlbUrl": "nlb-2b60935-c62324d181d94834.elb.eu-west-1.amazonaws.com"
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2",
+                "custom": true,
+                "id": "3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "region": "eu-west-1",
+                    "version": "3.19.2"
+                },
+                "outputs": {
+                    "region": "eu-west-1",
+                    "version": "3.19.2"
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster::pk-cluster",
+                "custom": false,
+                "type": "awsx:x:ecs:Cluster",
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "custom": false,
+                "type": "awsx:x:ecs:FargateTaskDefinition",
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateService::eventstore-service",
+                "custom": false,
+                "type": "awsx:x:ecs:FargateService",
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "custom": false,
+                "type": "awsx:lb:NetworkLoadBalancer",
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer::nlb"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup::pk-cluster",
+                "custom": false,
+                "type": "awsx:x:ec2:SecurityGroup",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster::pk-cluster"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$aws:ecs/cluster:Cluster::pk-cluster",
+                "custom": true,
+                "id": "arn:aws:ecs:eu-west-1:052848974346:cluster/pk-cluster-274656f",
+                "type": "aws:ecs/cluster:Cluster",
+                "inputs": {
+                    "__defaults": [
+                        "name"
+                    ],
+                    "name": "pk-cluster-274656f",
+                    "tags": {
+                        "Name": "pk-cluster",
+                        "__defaults": [],
+                        "owner": "piers"
+                    }
+                },
+                "outputs": {
+                    "arn": "arn:aws:ecs:eu-west-1:052848974346:cluster/pk-cluster-274656f",
+                    "capacityProviders": [],
+                    "defaultCapacityProviderStrategies": [],
+                    "id": "arn:aws:ecs:eu-west-1:052848974346:cluster/pk-cluster-274656f",
+                    "name": "pk-cluster-274656f",
+                    "settings": [
+                        {
+                            "name": "containerInsights",
+                            "value": "disabled"
+                        }
+                    ],
+                    "tags": {
+                        "Name": "pk-cluster",
+                        "owner": "piers"
+                    }
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster::pk-cluster",
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "tags": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8080",
+                "custom": false,
+                "type": "awsx:lb:NetworkTargetGroup",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkTargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8080"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8081",
+                "custom": false,
+                "type": "awsx:lb:NetworkListener",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkListener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8081"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8080",
+                "custom": false,
+                "type": "awsx:lb:NetworkListener",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkListener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8080"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8081",
+                "custom": false,
+                "type": "awsx:lb:NetworkTargetGroup",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkTargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8081"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-execution",
+                "custom": true,
+                "id": "eventstore-service-execution-87ccd52",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "__defaults": [
+                        "forceDetachPolicies",
+                        "maxSessionDuration",
+                        "name",
+                        "path"
+                    ],
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Principal\":{\"Service\":\"ecs-tasks.amazonaws.com\"},\"Effect\":\"Allow\",\"Sid\":\"\"}]}",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "eventstore-service-execution-87ccd52",
+                    "path": "/"
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::052848974346:role/eventstore-service-execution-87ccd52",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ecs-tasks.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2020-12-09T11:57:01Z",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "id": "eventstore-service-execution-87ccd52",
+                    "maxSessionDuration": 3600,
+                    "name": "eventstore-service-execution-87ccd52",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAQYTQLLIFHXRAVYKTF"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport",
+                "custom": true,
+                "id": "multiport-7538e00",
+                "type": "aws:ecr/repository:Repository",
+                "inputs": {
+                    "__defaults": [
+                        "imageTagMutability",
+                        "name"
+                    ],
+                    "imageTagMutability": "MUTABLE",
+                    "name": "multiport-7538e00"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":1200000000000}}",
+                    "arn": "arn:aws:ecr:eu-west-1:052848974346:repository/multiport-7538e00",
+                    "encryptionConfigurations": [
+                        {
+                            "encryptionType": "AES256",
+                            "kmsKey": ""
+                        }
+                    ],
+                    "id": "multiport-7538e00",
+                    "imageScanningConfiguration": {
+                        "scanOnPush": false
+                    },
+                    "imageTagMutability": "MUTABLE",
+                    "name": "multiport-7538e00",
+                    "registryId": "052848974346",
+                    "repositoryUrl": "052848974346.dkr.ecr.eu-west-1.amazonaws.com/multiport-7538e00",
+                    "tags": {}
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:cloudwatch/logGroup:LogGroup::eventstore-service",
+                "custom": true,
+                "id": "eventstore-service-303df2a",
+                "type": "aws:cloudwatch/logGroup:LogGroup",
+                "inputs": {
+                    "__defaults": [
+                        "name"
+                    ],
+                    "name": "eventstore-service-303df2a",
+                    "retentionInDays": 1
+                },
+                "outputs": {
+                    "arn": "arn:aws:logs:eu-west-1:052848974346:log-group:eventstore-service-303df2a",
+                    "id": "eventstore-service-303df2a",
+                    "kmsKeyId": "",
+                    "name": "eventstore-service-303df2a",
+                    "retentionInDays": 1,
+                    "tags": {}
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "retentionInDays": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task",
+                "custom": true,
+                "id": "eventstore-service-task-29396fa",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "__defaults": [
+                        "forceDetachPolicies",
+                        "maxSessionDuration",
+                        "name",
+                        "path"
+                    ],
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Principal\":{\"Service\":\"ecs-tasks.amazonaws.com\"},\"Effect\":\"Allow\",\"Sid\":\"\"}]}",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "eventstore-service-task-29396fa",
+                    "path": "/"
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::052848974346:role/eventstore-service-task-29396fa",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ecs-tasks.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2020-12-09T11:57:02Z",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "id": "eventstore-service-task-29396fa",
+                    "maxSessionDuration": 3600,
+                    "name": "eventstore-service-task-29396fa",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAQYTQLLIFM2COYQRNM"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:EgressSecurityGroupRule::pk-cluster-egress",
+                "custom": false,
+                "type": "awsx:x:ec2:EgressSecurityGroupRule",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup::pk-cluster"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule::pk-cluster-containers",
+                "custom": false,
+                "type": "awsx:x:ec2:IngressSecurityGroupRule",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup::pk-cluster"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule::pk-cluster-ssh",
+                "custom": false,
+                "type": "awsx:x:ec2:IngressSecurityGroupRule",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup::pk-cluster"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                "custom": false,
+                "type": "awsx:x:ec2:Vpc",
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc-7b557f1d"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/lifecyclePolicy:LifecyclePolicy::multiport",
+                "custom": true,
+                "id": "multiport-7538e00",
+                "type": "aws:ecr/lifecyclePolicy:LifecyclePolicy",
+                "inputs": {
+                    "__defaults": [],
+                    "policy": "{\"rules\":[{\"rulePriority\":10,\"description\":\"remove untagged images\",\"selection\":{\"tagStatus\":\"untagged\",\"countType\":\"imageCountMoreThan\",\"countNumber\":1},\"action\":{\"type\":\"expire\"}}]}",
+                    "repository": "multiport-7538e00"
+                },
+                "outputs": {
+                    "id": "multiport-7538e00",
+                    "policy": "{\"rules\":[{\"rulePriority\":10,\"description\":\"remove untagged images\",\"selection\":{\"tagStatus\":\"untagged\",\"countType\":\"imageCountMoreThan\",\"countNumber\":1},\"action\":{\"type\":\"expire\"}}]}",
+                    "registryId": "052848974346",
+                    "repository": "multiport-7538e00"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "policy": null,
+                    "repository": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/rolePolicyAttachment:RolePolicyAttachment::eventstore-service-execution-9a42f520",
+                "custom": true,
+                "id": "eventstore-service-execution-87ccd52-20201209115707490600000001",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+                    "role": "eventstore-service-execution-87ccd52"
+                },
+                "outputs": {
+                    "id": "eventstore-service-execution-87ccd52-20201209115707490600000001",
+                    "policyArn": "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+                    "role": "eventstore-service-execution-87ccd52"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-execution"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-execution"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/rolePolicyAttachment:RolePolicyAttachment::eventstore-service-task-fd1a00e5",
+                "custom": true,
+                "id": "eventstore-service-task-29396fa-20201209115707789800000002",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess",
+                    "role": "eventstore-service-task-29396fa"
+                },
+                "outputs": {
+                    "id": "eventstore-service-task-29396fa-20201209115707789800000002",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess",
+                    "role": "eventstore-service-task-29396fa"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/rolePolicyAttachment:RolePolicyAttachment::eventstore-service-task-32be53a2",
+                "custom": true,
+                "id": "eventstore-service-task-29396fa-20201209115708009800000003",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AWSLambdaFullAccess",
+                    "role": "eventstore-service-task-29396fa"
+                },
+                "outputs": {
+                    "id": "eventstore-service-task-29396fa-20201209115708009800000003",
+                    "policyArn": "arn:aws:iam::aws:policy/AWSLambdaFullAccess",
+                    "role": "eventstore-service-task-29396fa"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-public-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-public-0",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-7b557f1d-public-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-public-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-public-1",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::default-vpc-7b557f1d-public-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-1",
+                "custom": true,
+                "id": "subnet-0e97e046",
+                "type": "aws:ec2/subnet:Subnet",
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-1:052848974346:subnet/subnet-0e97e046",
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "eu-west-1c",
+                    "availabilityZoneId": "euw1-az2",
+                    "cidrBlock": "172.31.16.0/20",
+                    "id": "subnet-0e97e046",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockAssociationId": "",
+                    "mapPublicIpOnLaunch": true,
+                    "outpostArn": "",
+                    "ownerId": "052848974346",
+                    "tags": {},
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                "external": true,
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc",
+                "custom": true,
+                "id": "vpc-7b557f1d",
+                "type": "aws:ec2/vpc:Vpc",
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-1:052848974346:vpc/vpc-7b557f1d",
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "172.31.0.0/16",
+                    "defaultNetworkAclId": "acl-d744e8ae",
+                    "defaultRouteTableId": "rtb-e6b0ed9f",
+                    "defaultSecurityGroupId": "sg-88c0e4f9",
+                    "dhcpOptionsId": "dopt-c2a7c2a4",
+                    "enableClassiclink": false,
+                    "enableClassiclinkDnsSupport": false,
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "id": "vpc-7b557f1d",
+                    "instanceTenancy": "default",
+                    "ipv6AssociationId": "",
+                    "ipv6CidrBlock": "",
+                    "mainRouteTableId": "rtb-e6b0ed9f",
+                    "ownerId": "052848974346",
+                    "tags": {}
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::pulumi:pulumi:Stack::nlb-fargate-dev",
+                "external": true,
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-0",
+                "custom": true,
+                "id": "subnet-61355207",
+                "type": "aws:ec2/subnet:Subnet",
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-1:052848974346:subnet/subnet-61355207",
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "eu-west-1b",
+                    "availabilityZoneId": "euw1-az1",
+                    "cidrBlock": "172.31.0.0/20",
+                    "id": "subnet-61355207",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockAssociationId": "",
+                    "mapPublicIpOnLaunch": true,
+                    "outpostArn": "",
+                    "ownerId": "052848974346",
+                    "tags": {},
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc::default-vpc",
+                "external": true,
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86"
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                "custom": true,
+                "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                "type": "aws:lb/targetGroup:TargetGroup",
+                "inputs": {
+                    "__defaults": [
+                        "lambdaMultiValueHeadersEnabled",
+                        "name",
+                        "proxyProtocolV2",
+                        "slowStart"
+                    ],
+                    "deregistrationDelay": 300,
+                    "lambdaMultiValueHeadersEnabled": false,
+                    "name": "nlb-listener-8081-dea8ed3",
+                    "port": 8081,
+                    "protocol": "TCP",
+                    "proxyProtocolV2": false,
+                    "slowStart": 0,
+                    "tags": {
+                        "Name": "nlb-listener-8081",
+                        "__defaults": []
+                    },
+                    "targetType": "ip",
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "outputs": {
+                    "arn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                    "arnSuffix": "targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                    "deregistrationDelay": 300,
+                    "healthCheck": {
+                        "enabled": true,
+                        "healthyThreshold": 3,
+                        "interval": 30,
+                        "matcher": "",
+                        "path": "",
+                        "port": "traffic-port",
+                        "protocol": "TCP",
+                        "timeout": 10,
+                        "unhealthyThreshold": 3
+                    },
+                    "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                    "lambdaMultiValueHeadersEnabled": false,
+                    "name": "nlb-listener-8081-dea8ed3",
+                    "port": 8081,
+                    "protocol": "TCP",
+                    "proxyProtocolV2": false,
+                    "slowStart": 0,
+                    "stickiness": {
+                        "cookieDuration": 0,
+                        "enabled": false,
+                        "type": "source_ip"
+                    },
+                    "tags": {
+                        "Name": "nlb-listener-8081"
+                    },
+                    "targetType": "ip",
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8081",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "deregistrationDelay": null,
+                    "port": null,
+                    "protocol": null,
+                    "tags": null,
+                    "targetType": null,
+                    "vpcId": [
+                        "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::d21401d7",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:elasticloadbalancingv2/targetGroup:TargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster",
+                "custom": true,
+                "id": "sg-0131f0bccee6e4ca6",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "__defaults": [
+                        "name",
+                        "revokeRulesOnDelete"
+                    ],
+                    "description": "Managed by Pulumi",
+                    "name": "pk-cluster-10fe68e",
+                    "revokeRulesOnDelete": false,
+                    "tags": {
+                        "Name": "pk-cluster",
+                        "__defaults": []
+                    },
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-1:052848974346:security-group/sg-0131f0bccee6e4ca6",
+                    "description": "Managed by Pulumi",
+                    "egress": [],
+                    "id": "sg-0131f0bccee6e4ca6",
+                    "ingress": [],
+                    "name": "pk-cluster-10fe68e",
+                    "namePrefix": "",
+                    "ownerId": "052848974346",
+                    "revokeRulesOnDelete": false,
+                    "tags": {
+                        "Name": "pk-cluster"
+                    },
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup::pk-cluster",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "description": null,
+                    "tags": null,
+                    "vpcId": [
+                        "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                "custom": true,
+                "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                "type": "aws:lb/targetGroup:TargetGroup",
+                "inputs": {
+                    "__defaults": [
+                        "lambdaMultiValueHeadersEnabled",
+                        "name",
+                        "proxyProtocolV2",
+                        "slowStart"
+                    ],
+                    "deregistrationDelay": 300,
+                    "lambdaMultiValueHeadersEnabled": false,
+                    "name": "nlb-listener-8080-f365e42",
+                    "port": 8080,
+                    "protocol": "TCP",
+                    "proxyProtocolV2": false,
+                    "slowStart": 0,
+                    "tags": {
+                        "Name": "nlb-listener-8080",
+                        "__defaults": []
+                    },
+                    "targetType": "ip",
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "outputs": {
+                    "arn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                    "arnSuffix": "targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                    "deregistrationDelay": 300,
+                    "healthCheck": {
+                        "enabled": true,
+                        "healthyThreshold": 3,
+                        "interval": 30,
+                        "matcher": "",
+                        "path": "",
+                        "port": "traffic-port",
+                        "protocol": "TCP",
+                        "timeout": 10,
+                        "unhealthyThreshold": 3
+                    },
+                    "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                    "lambdaMultiValueHeadersEnabled": false,
+                    "name": "nlb-listener-8080-f365e42",
+                    "port": 8080,
+                    "protocol": "TCP",
+                    "proxyProtocolV2": false,
+                    "slowStart": 0,
+                    "stickiness": {
+                        "cookieDuration": 0,
+                        "enabled": false,
+                        "type": "source_ip"
+                    },
+                    "tags": {
+                        "Name": "nlb-listener-8080"
+                    },
+                    "targetType": "ip",
+                    "vpcId": "vpc-7b557f1d"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup::nlb-listener-8080",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "deregistrationDelay": null,
+                    "port": null,
+                    "protocol": null,
+                    "tags": null,
+                    "targetType": null,
+                    "vpcId": [
+                        "urn:pulumi:dev::nlb-fargate::aws:ec2/vpc:Vpc::default-vpc"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::b5acf02a",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:elasticloadbalancingv2/targetGroup:TargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb",
+                "custom": true,
+                "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                "type": "aws:lb/loadBalancer:LoadBalancer",
+                "inputs": {
+                    "__defaults": [
+                        "dropInvalidHeaderFields",
+                        "enableCrossZoneLoadBalancing",
+                        "enableDeletionProtection",
+                        "enableHttp2",
+                        "idleTimeout",
+                        "name"
+                    ],
+                    "dropInvalidHeaderFields": false,
+                    "enableCrossZoneLoadBalancing": false,
+                    "enableDeletionProtection": false,
+                    "enableHttp2": true,
+                    "idleTimeout": 60,
+                    "internal": false,
+                    "loadBalancerType": "network",
+                    "name": "nlb-2b60935",
+                    "securityGroups": [],
+                    "subnets": [
+                        "subnet-61355207",
+                        "subnet-0e97e046"
+                    ],
+                    "tags": {
+                        "Name": "nlb",
+                        "__defaults": [],
+                        "owner": "piers"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000,\"update\":600000000000}}",
+                    "accessLogs": {
+                        "bucket": "",
+                        "enabled": false,
+                        "prefix": ""
+                    },
+                    "arn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "arnSuffix": "net/nlb-2b60935/c62324d181d94834",
+                    "customerOwnedIpv4Pool": "",
+                    "dnsName": "nlb-2b60935-c62324d181d94834.elb.eu-west-1.amazonaws.com",
+                    "enableCrossZoneLoadBalancing": false,
+                    "enableDeletionProtection": false,
+                    "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "internal": false,
+                    "ipAddressType": "ipv4",
+                    "loadBalancerType": "network",
+                    "name": "nlb-2b60935",
+                    "securityGroups": [],
+                    "subnetMappings": [
+                        {
+                            "allocationId": "",
+                            "outpostId": "",
+                            "privateIpv4Address": "",
+                            "subnetId": "subnet-61355207"
+                        },
+                        {
+                            "allocationId": "",
+                            "outpostId": "",
+                            "privateIpv4Address": "",
+                            "subnetId": "subnet-0e97e046"
+                        }
+                    ],
+                    "subnets": [
+                        "subnet-61355207",
+                        "subnet-0e97e046"
+                    ],
+                    "tags": {
+                        "Name": "nlb",
+                        "owner": "piers"
+                    },
+                    "vpcId": "vpc-7b557f1d",
+                    "zoneId": "Z2IFOLAFXWLO4F"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer::nlb",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-0",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-1"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "internal": null,
+                    "loadBalancerType": null,
+                    "securityGroups": null,
+                    "subnets": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-0",
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-1"
+                    ],
+                    "tags": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::f10a0909",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:elasticloadbalancingv2/loadBalancer:LoadBalancer::nlb",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule$aws:ec2/securityGroupRule:SecurityGroupRule::pk-cluster-containers",
+                "custom": true,
+                "id": "sgrule-3442890481",
+                "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                "inputs": {
+                    "__defaults": [
+                        "self"
+                    ],
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow incoming tcp on any port from any ipv4 address",
+                    "fromPort": 0,
+                    "protocol": "tcp",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 65535,
+                    "type": "ingress"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"2\"}",
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow incoming tcp on any port from any ipv4 address",
+                    "fromPort": 0,
+                    "id": "sgrule-3442890481",
+                    "protocol": "tcp",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 65535,
+                    "type": "ingress"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule::pk-cluster-containers",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "cidrBlocks": null,
+                    "description": null,
+                    "fromPort": null,
+                    "protocol": null,
+                    "securityGroupId": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                    ],
+                    "toPort": null,
+                    "type": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:EgressSecurityGroupRule$aws:ec2/securityGroupRule:SecurityGroupRule::pk-cluster-egress",
+                "custom": true,
+                "id": "sgrule-474301030",
+                "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                "inputs": {
+                    "__defaults": [
+                        "self"
+                    ],
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow output to any ipv4 address using any protocol",
+                    "fromPort": 0,
+                    "protocol": "-1",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 0,
+                    "type": "egress"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"2\"}",
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow output to any ipv4 address using any protocol",
+                    "fromPort": 0,
+                    "id": "sgrule-474301030",
+                    "protocol": "-1",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 0,
+                    "type": "egress"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:EgressSecurityGroupRule::pk-cluster-egress",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "cidrBlocks": null,
+                    "description": null,
+                    "fromPort": null,
+                    "protocol": null,
+                    "securityGroupId": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                    ],
+                    "toPort": null,
+                    "type": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule$aws:ec2/securityGroupRule:SecurityGroupRule::pk-cluster-ssh",
+                "custom": true,
+                "id": "sgrule-1927034302",
+                "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                "inputs": {
+                    "__defaults": [
+                        "self"
+                    ],
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow ssh in from any ipv4 address",
+                    "fromPort": 22,
+                    "protocol": "tcp",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 22,
+                    "type": "ingress"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"2\"}",
+                    "cidrBlocks": [
+                        "0.0.0.0/0"
+                    ],
+                    "description": "allow ssh in from any ipv4 address",
+                    "fromPort": 22,
+                    "id": "sgrule-1927034302",
+                    "protocol": "tcp",
+                    "securityGroupId": "sg-0131f0bccee6e4ca6",
+                    "self": false,
+                    "toPort": 22,
+                    "type": "ingress"
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule::pk-cluster-ssh",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "cidrBlocks": null,
+                    "description": null,
+                    "fromPort": null,
+                    "protocol": null,
+                    "securityGroupId": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                    ],
+                    "toPort": null,
+                    "type": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                "custom": true,
+                "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/0367860fe3ab37c6",
+                "type": "aws:lb/listener:Listener",
+                "inputs": {
+                    "__defaults": [],
+                    "defaultActions": [
+                        {
+                            "__defaults": [],
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                            "type": "forward"
+                        }
+                    ],
+                    "loadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "port": 8081,
+                    "protocol": "TCP"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"read\":600000000000}}",
+                    "arn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/0367860fe3ab37c6",
+                    "defaultActions": [
+                        {
+                            "authenticateCognito": null,
+                            "authenticateOidc": null,
+                            "fixedResponse": null,
+                            "forward": null,
+                            "order": 1,
+                            "redirect": null,
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8081-dea8ed3/b70f57cc21b3185a",
+                            "type": "forward"
+                        }
+                    ],
+                    "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/0367860fe3ab37c6",
+                    "loadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "port": 8081,
+                    "protocol": "TCP",
+                    "sslPolicy": ""
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8081",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "defaultActions": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081"
+                    ],
+                    "loadBalancerArn": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb"
+                    ],
+                    "port": null,
+                    "protocol": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:elasticloadbalancingv2/listener:Listener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                "custom": true,
+                "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/beb3095a420204ae",
+                "type": "aws:lb/listener:Listener",
+                "inputs": {
+                    "__defaults": [],
+                    "defaultActions": [
+                        {
+                            "__defaults": [],
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                            "type": "forward"
+                        }
+                    ],
+                    "loadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "port": 8080,
+                    "protocol": "TCP"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"read\":600000000000}}",
+                    "arn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/beb3095a420204ae",
+                    "defaultActions": [
+                        {
+                            "authenticateCognito": null,
+                            "authenticateOidc": null,
+                            "fixedResponse": null,
+                            "forward": null,
+                            "order": 1,
+                            "redirect": null,
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da",
+                            "type": "forward"
+                        }
+                    ],
+                    "id": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:listener/net/nlb-2b60935/c62324d181d94834/beb3095a420204ae",
+                    "loadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:loadbalancer/net/nlb-2b60935/c62324d181d94834",
+                    "port": 8080,
+                    "protocol": "TCP",
+                    "sslPolicy": ""
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener::nlb-listener-8080",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "defaultActions": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080"
+                    ],
+                    "loadBalancerArn": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$aws:lb/loadBalancer:LoadBalancer::nlb"
+                    ],
+                    "port": null,
+                    "protocol": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:elasticloadbalancingv2/listener:Listener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:x:elasticloadbalancingv2:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:elasticloadbalancingv2:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecs/taskDefinition:TaskDefinition::eventstore-service",
+                "custom": true,
+                "id": "eventstore-service-aece9bcd",
+                "type": "aws:ecs/taskDefinition:TaskDefinition",
+                "inputs": {
+                    "__defaults": [],
+                    "containerDefinitions": "[{\"image\":\"052848974346.dkr.ecr.eu-west-1.amazonaws.com/multiport-7538e00:73793bfc41c6beb2dc1847314339e1034f83ec93acb54c7614fd3435c6c02a79\",\"portMappings\":[{\"containerPort\":8081,\"hostPort\":8081},{\"containerPort\":8080,\"hostPort\":8080}],\"environment\":[],\"name\":\"app\",\"logConfiguration\":{\"logDriver\":\"awslogs\",\"options\":{\"awslogs-group\":\"eventstore-service-303df2a\",\"awslogs-region\":\"eu-west-1\",\"awslogs-stream-prefix\":\"app\"}}}]",
+                    "cpu": "256",
+                    "executionRoleArn": "arn:aws:iam::052848974346:role/eventstore-service-execution-87ccd52",
+                    "family": "eventstore-service-aece9bcd",
+                    "memory": "512",
+                    "networkMode": "awsvpc",
+                    "requiresCompatibilities": [
+                        "FARGATE"
+                    ],
+                    "taskRoleArn": "arn:aws:iam::052848974346:role/eventstore-service-task-29396fa"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ecs:eu-west-1:052848974346:task-definition/eventstore-service-aece9bcd:8",
+                    "containerDefinitions": "[{\"cpu\":0,\"environment\":[],\"essential\":true,\"image\":\"052848974346.dkr.ecr.eu-west-1.amazonaws.com/multiport-7538e00:73793bfc41c6beb2dc1847314339e1034f83ec93acb54c7614fd3435c6c02a79\",\"logConfiguration\":{\"logDriver\":\"awslogs\",\"options\":{\"awslogs-group\":\"eventstore-service-303df2a\",\"awslogs-region\":\"eu-west-1\",\"awslogs-stream-prefix\":\"app\"}},\"mountPoints\":[],\"name\":\"app\",\"portMappings\":[{\"containerPort\":8081,\"hostPort\":8081,\"protocol\":\"tcp\"},{\"containerPort\":8080,\"hostPort\":8080,\"protocol\":\"tcp\"}],\"volumesFrom\":[]}]",
+                    "cpu": "256",
+                    "executionRoleArn": "arn:aws:iam::052848974346:role/eventstore-service-execution-87ccd52",
+                    "family": "eventstore-service-aece9bcd",
+                    "id": "eventstore-service-aece9bcd",
+                    "inferenceAccelerators": [],
+                    "ipcMode": "",
+                    "memory": "512",
+                    "networkMode": "awsvpc",
+                    "pidMode": "",
+                    "placementConstraints": [],
+                    "proxyConfiguration": null,
+                    "requiresCompatibilities": [
+                        "FARGATE"
+                    ],
+                    "revision": 8,
+                    "tags": {},
+                    "taskRoleArn": "arn:aws:iam::052848974346:role/eventstore-service-task-29396fa",
+                    "volumes": []
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:cloudwatch/logGroup:LogGroup::eventstore-service",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-execution",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "containerDefinitions": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport",
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:cloudwatch/logGroup:LogGroup::eventstore-service",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080"
+                    ],
+                    "cpu": null,
+                    "executionRoleArn": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-execution"
+                    ],
+                    "family": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecr/repository:Repository::multiport",
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:cloudwatch/logGroup:LogGroup::eventstore-service",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8081",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8081",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080"
+                    ],
+                    "memory": null,
+                    "networkMode": null,
+                    "requiresCompatibilities": null,
+                    "taskRoleArn": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:iam/role:Role::eventstore-service-task"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateService$aws:ecs/service:Service::eventstore-service",
+                "custom": true,
+                "id": "arn:aws:ecs:eu-west-1:052848974346:service/pk-cluster-274656f/eventstore-service-16eb79b",
+                "type": "aws:ecs/service:Service",
+                "inputs": {
+                    "__defaults": [
+                        "deploymentMaximumPercent",
+                        "deploymentMinimumHealthyPercent",
+                        "enableEcsManagedTags",
+                        "name",
+                        "schedulingStrategy"
+                    ],
+                    "cluster": "arn:aws:ecs:eu-west-1:052848974346:cluster/pk-cluster-274656f",
+                    "deploymentMaximumPercent": 200,
+                    "deploymentMinimumHealthyPercent": 100,
+                    "desiredCount": 1,
+                    "enableEcsManagedTags": false,
+                    "launchType": "FARGATE",
+                    "loadBalancers": [
+                        {
+                            "__defaults": [],
+                            "containerName": "app",
+                            "containerPort": 8080,
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da"
+                        }
+                    ],
+                    "name": "eventstore-service-16eb79b",
+                    "networkConfiguration": {
+                        "__defaults": [],
+                        "assignPublicIp": true,
+                        "securityGroups": [
+                            "sg-0131f0bccee6e4ca6"
+                        ],
+                        "subnets": [
+                            "subnet-61355207",
+                            "subnet-0e97e046"
+                        ]
+                    },
+                    "platformVersion": "1.4.0",
+                    "schedulingStrategy": "REPLICA",
+                    "taskDefinition": "arn:aws:ecs:eu-west-1:052848974346:task-definition/eventstore-service-aece9bcd:8",
+                    "waitForSteadyState": true
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":1200000000000}}",
+                    "capacityProviderStrategies": [],
+                    "cluster": "arn:aws:ecs:eu-west-1:052848974346:cluster/pk-cluster-274656f",
+                    "deploymentController": {
+                        "type": "ECS"
+                    },
+                    "deploymentMaximumPercent": 200,
+                    "deploymentMinimumHealthyPercent": 100,
+                    "desiredCount": 1,
+                    "enableEcsManagedTags": false,
+                    "healthCheckGracePeriodSeconds": 0,
+                    "iamRole": "aws-service-role",
+                    "id": "arn:aws:ecs:eu-west-1:052848974346:service/pk-cluster-274656f/eventstore-service-16eb79b",
+                    "launchType": "FARGATE",
+                    "loadBalancers": [
+                        {
+                            "containerName": "app",
+                            "containerPort": 8080,
+                            "elbName": "",
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:052848974346:targetgroup/nlb-listener-8080-f365e42/73c9a240e22a12da"
+                        }
+                    ],
+                    "name": "eventstore-service-16eb79b",
+                    "networkConfiguration": {
+                        "assignPublicIp": true,
+                        "securityGroups": [
+                            "sg-0131f0bccee6e4ca6"
+                        ],
+                        "subnets": [
+                            "subnet-61355207",
+                            "subnet-0e97e046"
+                        ]
+                    },
+                    "orderedPlacementStrategies": [],
+                    "placementConstraints": [],
+                    "platformVersion": "1.4.0",
+                    "propagateTags": "NONE",
+                    "schedulingStrategy": "REPLICA",
+                    "serviceRegistries": null,
+                    "tags": {},
+                    "taskDefinition": "arn:aws:ecs:eu-west-1:052848974346:task-definition/eventstore-service-aece9bcd:8",
+                    "waitForSteadyState": true
+                },
+                "parent": "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateService::eventstore-service",
+                "dependencies": [
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-0",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-1",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$aws:ecs/cluster:Cluster::pk-cluster",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster",
+                    "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecs/taskDefinition:TaskDefinition::eventstore-service"
+                ],
+                "provider": "urn:pulumi:dev::nlb-fargate::pulumi:providers:aws::default_3_19_2::3ae850d1-4f37-4acf-8b3a-b11e77ebea86",
+                "propertyDependencies": {
+                    "cluster": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$aws:ecs/cluster:Cluster::pk-cluster"
+                    ],
+                    "desiredCount": null,
+                    "launchType": null,
+                    "loadBalancers": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkListener$aws:lb/listener:Listener::nlb-listener-8080",
+                        "urn:pulumi:dev::nlb-fargate::awsx:lb:NetworkLoadBalancer$awsx:lb:NetworkTargetGroup$aws:lb/targetGroup:TargetGroup::nlb-listener-8080"
+                    ],
+                    "networkConfiguration": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-0",
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ec2:Vpc$aws:ec2/subnet:Subnet::default-vpc-public-1",
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:Cluster$awsx:x:ec2:SecurityGroup$aws:ec2/securityGroup:SecurityGroup::pk-cluster"
+                    ],
+                    "platformVersion": null,
+                    "taskDefinition": [
+                        "urn:pulumi:dev::nlb-fargate::awsx:x:ecs:FargateTaskDefinition$aws:ecs/taskDefinition:TaskDefinition::eventstore-service"
+                    ],
+                    "waitForSteadyState": null
+                }
+            }
+        ],
+        "pending_operations": [
+            
+        ]
+    }
+}
