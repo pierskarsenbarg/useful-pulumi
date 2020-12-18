@@ -2,8 +2,12 @@
 
 ## To run
 
+`npm install`
+
 `pulumi stack init dev`
+
 `pulumi config set aws:region {AWS Region}`
+
 `pulumi up`
 
 # To test
