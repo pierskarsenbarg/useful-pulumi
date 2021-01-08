@@ -1,0 +1,3 @@
+name: ssh-box
+runtime: nodejs
+description: Quick program for when you need a box to ssh into on the internet
