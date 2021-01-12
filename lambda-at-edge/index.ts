@@ -1,16 +1,10 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
 
 import requestLambda from "./lambda";
 
-const baseTags = {
-  owner: "piers",
-};
-
 const bucket = new aws.s3.Bucket("cloudFrontBucket", {
   acl: "private",
-  tags: baseTags,
   website: {
     indexDocument: "index.html",
     errorDocument: "404.html",
@@ -37,7 +31,7 @@ function publicReadPolicyForBucket(bucketName: string): aws.iam.PolicyDocument {
         Principal: "*",
         Action: ["s3:GetObject"],
         Resource: [
-          `arn:aws:s3:::${bucketName}/*`, // policy refers to bucket name explicitly
+          pulumi.interpolate`${bucket.arn}/*`
         ],
       },
     ],
@@ -49,8 +43,6 @@ let bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
   bucket: bucket.bucket, // refer to the bucket created earlier
   policy: bucket.bucket.apply(publicReadPolicyForBucket), // use output property `siteBucket.bucket`,
 });
-
-
 
 const targetOriginId: string = "s3Origin";
 
@@ -89,9 +81,6 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
       restrictionType: "whitelist",
       locations: ["US", "CA", "GB", "DE"],
     },
-  },
-  tags: {
-    ...baseTags,
   },
   viewerCertificate: {
     cloudfrontDefaultCertificate: true,
