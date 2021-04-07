@@ -1,0 +1,1073 @@
+I0407 13:49:32.520291   93788 backend.go:410] found username for access token
+I0407 13:49:32.777644   93788 backend.go:410] found username for access token
+I0407 13:49:33.302495   93788 backend.go:410] found username for access token
+I0407 13:49:33.302117   93788 backend.go:917] Stack dev being updated to version 3
+I0407 13:49:33.816478   93788 plugins.go:77] gatherPluginsFromProgram(): gathering plugins from language host
+I0407 13:49:33.818102   93788 plugins.go:588] GetPluginPath(language, python, <nil>): found on $PATH /Users/piers/.pulumi/bin/pulumi-language-python
+I0407 13:49:33.818235   93788 plugin.go:124] Launching plugin 'python' from '/Users/piers/.pulumi/bin/pulumi-language-python' with args: -virtualenv=venv,127.0.0.1:53598
+I0407 13:49:33.958886   93788 langruntime_plugin.go:178] langhost[python].GetPluginInfo() executing
+I0407 13:49:33.960660   93788 langruntime_plugin.go:91] langhost[python].GetRequiredPlugins(proj=use-cache-python,pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.) executing
+I0407 13:49:35.030363   93788 langruntime_plugin.go:133] langhost[python].GetRequiredPlugins(proj=use-cache-python,pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.) success: #versions=1
+I0407 13:49:35.030435   93788 plugins.go:89] gatherPluginsFromProgram(): plugin python <nil> () is required by language host
+I0407 13:49:35.030454   93788 plugins.go:89] gatherPluginsFromProgram(): plugin docker 2.9.1 () is required by language host
+I0407 13:49:35.030705   93788 plugins.go:101] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0407 13:49:35.030750   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev", not a provider
+I0407 13:49:35.030768   93788 plugins.go:118] gatherPluginsFromSnapshot(): plugin docker 2.9.1 is required by first-class provider "urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1"
+I0407 13:49:35.031007   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image", not a provider
+I0407 13:49:35.031021   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder", not a provider
+I0407 13:49:35.031036   93788 plugins.go:133] ensurePluginsAreInstalled(): beginning
+I0407 13:49:35.031158   93788 plugins.go:588] GetPluginPath(language, python, <nil>): found on $PATH /Users/piers/.pulumi/bin/pulumi-language-python
+I0407 13:49:35.031172   93788 plugins.go:138] ensurePluginsAreInstalled(): plugin python <nil> already installed
+I0407 13:49:35.944965   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:49:35.945023   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:49:35.945046   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:49:35.945056   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:49:35.945064   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:49:35.945073   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:49:35.945081   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:49:35.945089   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:49:35.945097   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:49:35.945115   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:49:35.945127   93788 plugins.go:138] ensurePluginsAreInstalled(): plugin docker 2.9.1 already installed
+I0407 13:49:35.945152   93788 plugins.go:153] ensurePluginsAreInstalled(): completed
+I0407 13:49:35.945163   93788 plugins.go:241] computeDefaultProviderPlugins(): considering python
+I0407 13:49:35.945177   93788 plugins.go:244] computeDefaultProviderPlugins(): skipping python, not a resource provider
+I0407 13:49:35.945182   93788 plugins.go:241] computeDefaultProviderPlugins(): considering docker-2.9.1
+I0407 13:49:35.945196   93788 plugins.go:272] computeDefaultProviderPlugins(): plugin docker-2.9.1 selected for package docker (first seen)
+I0407 13:49:35.945203   93788 plugins.go:278] computeDefaultProviderPlugins(): summary of default plugins:
+I0407 13:49:35.945209   93788 plugins.go:280]   docker          = 2.9.1
+I0407 13:49:35.946891   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev): 
+I0407 13:49:36.272677   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:49:36.272711   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:49:36.272728   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:49:36.272735   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:49:36.272741   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:49:36.272748   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:49:36.272754   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:49:36.272760   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:49:36.272766   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:49:36.272781   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:49:36.272810   93788 plugin.go:124] Launching plugin 'docker (resource)' from '/Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker' with args: 127.0.0.1:53598
+I0407 13:49:36.467730   93788 provider_plugin.go:1296] Provider[docker, 0xc0006a83c0].GetPluginInfo() executing
+I0407 13:49:36.470299   93788 provider_plugin.go:448] Provider[docker, 0xc0006a83c0].Configure() executing (#vars=1)
+I0407 13:49:36.470703   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Configure().inputs]: version={2.9.1}
+I0407 13:49:36.471114   93788 registry.go:134] loaded provider urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b
+I0407 13:49:36.471749   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image): 
+I0407 13:49:36.471759   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder): urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b
+I0407 13:49:36.474117   93788 step_generator.go:838] stepGenerator.GeneratePendingDeletes(): scanning previous snapshot for pending deletes
+I0407 13:49:36.474144   93788 deployment_executor.go:400] deploymentExecutor.retirePendingDeletes(...): no pending deletions
+I0407 13:49:36.474299   93788 langruntime_plugin.go:144] langhost[python].Run(pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.,#args=0,proj=use-cache-python,stack=dev,#config=0,dryrun=true) executing
+I0407 13:49:36.474495   93788 deployment_executor.go:221] deploymentExecutor.Execute(...): waiting for incoming events
+I0407 13:49:36.475180   93788 step_executor.go:327] StepExecutor worker(-2): worker coming online
+I0407 13:49:36.475196   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:36.802599   93788 eventsink.go:59] registering resource: ty=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=False, remote=False
+I0407 13:49:36.802728   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=False, remote=False<{%reset%}>)
+I0407 13:49:36.805577   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:36.805615   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:37.123796   93788 eventsink.go:59] registering module docker:index/container@2.9.1
+I0407 13:49:37.123852   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/container@2.9.1<{%reset%}>)
+I0407 13:49:37.124448   93788 eventsink.go:59] registering module docker:index/network@2.9.1
+I0407 13:49:37.124517   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/network@2.9.1<{%reset%}>)
+I0407 13:49:37.124905   93788 eventsink.go:59] registering module docker:index/plugin@2.9.1
+I0407 13:49:37.124939   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/plugin@2.9.1<{%reset%}>)
+I0407 13:49:37.125364   93788 eventsink.go:59] registering module docker:index/registryImage@2.9.1
+I0407 13:49:37.125393   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/registryImage@2.9.1<{%reset%}>)
+I0407 13:49:37.125786   93788 eventsink.go:59] registering module docker:index/remoteImage@2.9.1
+I0407 13:49:37.125829   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/remoteImage@2.9.1<{%reset%}>)
+I0407 13:49:37.126398   93788 eventsink.go:59] registering module docker:index/secret@2.9.1
+I0407 13:49:37.126441   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/secret@2.9.1<{%reset%}>)
+I0407 13:49:37.127125   93788 eventsink.go:59] registering module docker:index/service@2.9.1
+I0407 13:49:37.127169   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/service@2.9.1<{%reset%}>)
+I0407 13:49:37.127933   93788 eventsink.go:59] registering module docker:index/serviceConfig@2.9.1
+I0407 13:49:37.127992   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/serviceConfig@2.9.1<{%reset%}>)
+I0407 13:49:37.128550   93788 eventsink.go:59] registering module docker:index/volume@2.9.1
+I0407 13:49:37.128599   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/volume@2.9.1<{%reset%}>)
+I0407 13:49:37.132644   93788 eventsink.go:59] registering package docker@2.9.1
+I0407 13:49:37.132687   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering package docker@2.9.1<{%reset%}>)
+I0407 13:49:37.135561   93788 eventsink.go:59] registering resource: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=True, remote=False
+I0407 13:49:37.135607   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=True, remote=False<{%reset%}>)
+I0407 13:49:37.136011   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:37.136042   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:37.136928   93788 eventsink.go:59] adding resolver build
+I0407 13:49:37.136970   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver build<{%reset%}>)
+I0407 13:49:37.137521   93788 eventsink.go:59] adding resolver force_remove
+I0407 13:49:37.137547   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver force_remove<{%reset%}>)
+I0407 13:49:37.137948   93788 eventsink.go:59] adding resolver keep_locally
+I0407 13:49:37.137972   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver keep_locally<{%reset%}>)
+I0407 13:49:37.138301   93788 eventsink.go:59] adding resolver name
+I0407 13:49:37.138335   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver name<{%reset%}>)
+I0407 13:49:37.138670   93788 eventsink.go:59] adding resolver pull_trigger
+I0407 13:49:37.138691   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver pull_trigger<{%reset%}>)
+I0407 13:49:37.138994   93788 eventsink.go:59] adding resolver pull_triggers
+I0407 13:49:37.139026   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver pull_triggers<{%reset%}>)
+I0407 13:49:37.139360   93788 eventsink.go:59] adding resolver latest
+I0407 13:49:37.139378   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver latest<{%reset%}>)
+I0407 13:49:37.139681   93788 eventsink.go:59] adding resolver output
+I0407 13:49:37.139707   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver output<{%reset%}>)
+I0407 13:49:37.140143   93788 eventsink.go:59] registering resource: ty=docker:image:Image, name=runtime_image, custom=False, remote=False
+I0407 13:49:37.140173   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=docker:image:Image, name=runtime_image, custom=False, remote=False<{%reset%}>)
+I0407 13:49:37.140428   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:37.140442   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:37.141694   93788 eventsink.go:59] Waiting for outstanding RPCs to complete
+I0407 13:49:37.141734   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for outstanding RPCs to complete<{%reset%}>)
+I0407 13:49:37.142160   93788 eventsink.go:59] RPCs successfully completed
+I0407 13:49:37.142190   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0407 13:49:37.142780   93788 eventsink.go:59] Waiting for 35 outstanding tasks to complete
+I0407 13:49:37.142929   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for 35 outstanding tasks to complete<{%reset%}>)
+I0407 13:49:37.143672   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:37.143703   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:37.144039   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:37.144055   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:37.144333   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:37.144355   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:37.145124   93788 eventsink.go:59] beginning rpc register resource outputs
+I0407 13:49:37.145147   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource outputs<{%reset%}>)
+I0407 13:49:37.145572   93788 eventsink.go:59] preparing resource registration: ty=pulumi:pulumi:Stack, name=use-cache-python-dev
+I0407 13:49:37.145604   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=pulumi:pulumi:Stack, name=use-cache-python-dev<{%reset%}>)
+I0407 13:49:37.145943   93788 eventsink.go:59] resource {} preparing to wait for dependencies
+I0407 13:49:37.145967   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} preparing to wait for dependencies<{%reset%}>)
+I0407 13:49:37.146396   93788 eventsink.go:59] resource {} prepared
+I0407 13:49:37.146444   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} prepared<{%reset%}>)
+I0407 13:49:37.146913   93788 eventsink.go:59] resource registration prepared: ty=pulumi:pulumi:Stack, name=use-cache-python-dev
+I0407 13:49:37.146952   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=pulumi:pulumi:Stack, name=use-cache-python-dev<{%reset%}>)
+I0407 13:49:37.147857   93788 eventsink.go:59] preparing resource registration: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder
+I0407 13:49:37.147897   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder<{%reset%}>)
+I0407 13:49:37.148211   93788 eventsink.go:59] resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} preparing to wait for dependencies
+I0407 13:49:37.148250   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} preparing to wait for dependencies<{%reset%}>)
+I0407 13:49:37.148741   93788 eventsink.go:59] top-level input property translated: name -> name
+I0407 13:49:37.148777   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>top-level input property translated: name -> name<{%reset%}>)
+I0407 13:49:37.149205   93788 eventsink.go:59] preparing resource registration: ty=docker:image:Image, name=runtime_image
+I0407 13:49:37.149226   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=docker:image:Image, name=runtime_image<{%reset%}>)
+I0407 13:49:37.149450   93788 eventsink.go:59] resource {} preparing to wait for dependencies
+I0407 13:49:37.149469   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} preparing to wait for dependencies<{%reset%}>)
+I0407 13:49:40.524917   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:49:40.526425   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=use-cache-python-dev,#props=0
+I0407 13:49:40.526445   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:49:40.526455   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:49:40.527543   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev' after diff (same) (inputs=map[])
+I0407 13:49:40.528140   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:49:40.528169   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:40.528532   93788 step_executor.go:327] StepExecutor worker(0): launching oneshot worker
+I0407 13:49:40.529654   93788 step_executor.go:327] StepExecutor worker(0): applying step same on urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev (preview true)
+I0407 13:49:40.529704   93788 step_executor.go:327] StepExecutor worker(0): step same on urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev retired
+I0407 13:49:40.529728   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, #outs=0
+I0407 13:49:40.530633   93788 eventsink.go:59] resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev
+I0407 13:49:40.530666   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev<{%reset%}>)
+I0407 13:49:40.531900   93788 eventsink.go:59] resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} prepared
+I0407 13:49:40.531962   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} prepared<{%reset%}>)
+I0407 13:49:40.532781   93788 eventsink.go:59] resource registration prepared: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder
+I0407 13:49:40.532853   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder<{%reset%}>)
+I0407 13:49:40.533757   93788 eventsink.go:59] resource {} prepared
+I0407 13:49:40.533814   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} prepared<{%reset%}>)
+I0407 13:49:40.534347   93788 eventsink.go:59] resource registration prepared: ty=docker:image:Image, name=runtime_image
+I0407 13:49:40.534385   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=docker:image:Image, name=runtime_image<{%reset%}>)
+I0407 13:49:40.536529   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=docker:image:Image, name=runtime_image, custom=false, #props=0, parent=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:49:40.537312   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=docker:image:Image,name=runtime_image,#props=0
+I0407 13:49:40.537326   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:49:40.537333   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:49:40.537354   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image' after diff (same) (inputs=map[])
+I0407 13:49:40.537367   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:49:40.537376   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:40.537388   93788 step_executor.go:327] StepExecutor worker(1): launching oneshot worker
+I0407 13:49:40.537548   93788 source_eval.go:316] handling default provider request for package docker-2.9.1
+I0407 13:49:40.537581   93788 source_eval.go:283] newRegisterDefaultProviderEvent(docker-2.9.1): using version 2.9.1 from request
+I0407 13:49:40.537618   93788 source_eval.go:340] waiting for default provider for package docker-2.9.1
+I0407 13:49:40.537628   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=pulumi:providers:docker,name=default_2_9_1,#props=1
+I0407 13:49:40.537637   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:49:40.537643   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:49:40.537659   93788 registry.go:228] ProviderRegistry.Check(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:49:40.537701   93788 step_executor.go:327] StepExecutor worker(1): applying step same on urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image (preview true)
+I0407 13:49:40.537744   93788 step_executor.go:327] StepExecutor worker(1): step same on urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image retired
+I0407 13:49:40.537759   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=0
+I0407 13:49:40.538229   93788 eventsink.go:59] resource registration successful: ty=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image
+I0407 13:49:40.538253   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image<{%reset%}>)
+I0407 13:49:40.539054   93788 eventsink.go:59] Starting docker build and push...
+I0407 13:49:40.539068   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Starting docker build and push...<{%reset%}>)
+I0407 13:49:40.539329   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Building image './app'...<{%reset%}>)
+I0407 13:49:40.539589   93788 eventsink.go:59] Building container image 'pierskarsenbarg/dockercache-python:latest': context=./app, target=runtime
+I0407 13:49:40.539611   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Building container image 'pierskarsenbarg/dockercache-python:latest': context=./app, target=runtime<{%reset%}>)
+I0407 13:49:40.539864   93788 eventsink.go:59] Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest-builder --target builder ./app'
+I0407 13:49:40.539888   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest-builder --target builder ./app'<{%reset%}>)
+I0407 13:49:40.540496   93788 eventsink.go:94] eventSink::Warning(<{%reset%}>#1 [internal] load build definition from Dockerfile
+#1 sha256:3429986e75f50b1042427452e405daafd0c1e6b0182915464ddeb650d475fc45
+#1 transferring dockerfile: 37B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:310dccd504400283823fd45caf44ed24aa4ec250c238e786e0876365fd06b66a
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:15
+#3 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#3 ...
+
+#4 [auth] library/node:pull token for registry-1.docker.io
+#4 sha256:837fcf52553f732ba5d03f85ad4a51da3aee0b7d02250bedc0ba0a56f11f0a68
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:15
+#3 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#3 DONE 1.3s
+
+#5 [builder 1/5] FROM docker.io/library/node:15@sha256:c49e0d497dc650c8db7963881977db433f7b39abb82f6812c7ec7ce62cc5a77c
+#5 sha256:7682581d2f9377711a26827a82304f1bedd398502f54b458ded5676a7e228581
+#5 DONE 0.0s
+
+#7 [internal] load build context
+#7 sha256:7cc7dbacbb8deb32405a9b9c603582b790b3deaca70c7a3932025237d77df0da
+#7 transferring context: 60B done
+#7 DONE 0.0s
+
+#9 [builder 4/5] RUN npm i
+#9 sha256:798a23852e22403ca52b844f15e5d29013dc235df9866f7472853d7e57384310
+#9 CACHED
+
+#6 [builder 2/5] WORKDIR /app
+#6 sha256:306d953f64cc55c6a4846ad5b32a8567eefdbf957d79b636b888afb8c866f864
+#6 CACHED
+
+#8 [builder 3/5] COPY package.json .
+#8 sha256:c68566e5369aa7a834b9b51aecf09c5a87818976c5c2714b4be56b0b64915651
+#8 CACHED
+
+#10 [builder 5/5] COPY app.js .
+#10 sha256:d76045d760f2323fcc14f1f3b190473bbb61f061f569def5475b80a6db1a0a4a
+#10 CACHED
+
+#11 exporting to image
+#11 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#11 exporting layers done
+#11 writing image sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d done
+#11 naming to docker.io/pierskarsenbarg/dockercache-python:latest-builder done
+#11 DONE 0.0s<{%reset%}>)
+I0407 13:49:40.541203   93788 eventsink.go:59] Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest ./app'
+I0407 13:49:40.541243   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest ./app'<{%reset%}>)
+I0407 13:49:40.542167   93788 eventsink.go:94] eventSink::Warning(<{%reset%}>#1 [internal] load build definition from Dockerfile
+#1 sha256:300fc04a64e5b079370a512ab82a83f60b7338fdfa49a97defef11d053183676
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:6f800424bee830bd416a2069aeb46b9f8ac7327838cc6491e28e15bb61ed8522
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:15
+#4 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#4 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/node:15-alpine
+#3 sha256:3dbc53286eb8c9cc61fc3436f438c14e603ff5a4a39b4dbf83e6403c8122734d
+#3 DONE 0.3s
+
+#7 [builder 1/5] FROM docker.io/library/node:15@sha256:c49e0d497dc650c8db7963881977db433f7b39abb82f6812c7ec7ce62cc5a77c
+#7 sha256:7682581d2f9377711a26827a82304f1bedd398502f54b458ded5676a7e228581
+#7 DONE 0.0s
+
+#5 [runtime 1/3] FROM docker.io/library/node:15-alpine@sha256:fc24d15ecf126b8e6dd954198159407261a780c7684b944c8556f5ddb8bee580
+#5 sha256:c85d417928a699d6f99f4bee32773e2de2726d8021b9d5521e5f28326eeb3969
+#5 DONE 0.0s
+
+#9 [internal] load build context
+#9 sha256:27de8fe72e4098512b1f17a9b0b54c4aafcd1cca0403cb8080a5ee8727735668
+#9 transferring context: 60B done
+#9 DONE 0.0s
+
+#6 [runtime 2/3] WORKDIR /app
+#6 sha256:94bd450e5b78b0493d49c54cc41a7a786e5b487d7af2bfd526c402661cbeb184
+#6 CACHED
+
+#11 [builder 4/5] RUN npm i
+#11 sha256:2da6aa1f98363759df7e3207a8b0745d838a1c52f2e1b8840a9290e3dac552aa
+#11 CACHED
+
+#12 [builder 5/5] COPY app.js .
+#12 sha256:58f43e39377e5f4b8efabc0842cbe0758a82af5be170ca2cfa1da71d6c596427
+#12 CACHED
+
+#8 [builder 2/5] WORKDIR /app
+#8 sha256:306d953f64cc55c6a4846ad5b32a8567eefdbf957d79b636b888afb8c866f864
+#8 CACHED
+
+#10 [builder 3/5] COPY package.json .
+#10 sha256:586ff9d5ed2ab049a2c288cfac47474d862678fa3832d8bb27f38cc70e945267
+#10 CACHED
+
+#13 [runtime 3/3] COPY --from=builder /app .
+#13 sha256:f1db91b8dffb08198a4932fd805922a29d0fabe7f8bfc8cc3ccc025f884264bc
+#13 CACHED
+
+#14 exporting to image
+#14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#14 exporting layers done
+#14 writing image sha256:0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67 done
+#14 naming to docker.io/pierskarsenbarg/dockercache-python:latest done
+#14 DONE 0.0s<{%reset%}>)
+I0407 13:49:40.543588   93788 eventsink.go:59] Executing 'docker image inspect -f {{.Id}} pierskarsenbarg/dockercache-python:latest'
+I0407 13:49:40.543633   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker image inspect -f {{.Id}} pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:49:40.545150   93788 eventsink.go:70] eventSink::Info(<{%reset%}>sha256:0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67<{%reset%}>)
+I0407 13:49:40.545985   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Image build succeeded.<{%reset%}>)
+I0407 13:49:40.547044   93788 eventsink.go:59] Successfully pushed to docker
+I0407 13:49:40.547086   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Successfully pushed to docker<{%reset%}>)
+I0407 13:49:40.550371   93788 eventsink.go:59] register resource outputs prepared: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+I0407 13:49:40.550432   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>register resource outputs prepared: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+<{%reset%}>)
+I0407 13:49:40.551652   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResourceOutputs(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image)]: base_image_name={pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67}
+I0407 13:49:40.551717   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResourceOutputs(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image)]: image_name={pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67}
+I0407 13:49:40.551749   93788 source_eval.go:1005] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=2
+I0407 13:49:40.551813   93788 source_eval.go:163] EvalSourceIterator produced a completion: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image,#outs=2
+I0407 13:49:40.915126   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:49:40.915163   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:49:40.915181   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:49:40.915188   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:49:40.915194   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:49:40.915201   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:49:40.915207   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:49:40.915213   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:49:40.915219   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:49:40.915233   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:49:40.915250   93788 plugin.go:124] Launching plugin 'docker (resource)' from '/Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker' with args: 127.0.0.1:53598
+I0407 13:49:40.949829   93788 provider_plugin.go:1296] Provider[docker, 0xc0000cd440].GetPluginInfo() executing
+I0407 13:49:40.951002   93788 provider_plugin.go:176] Provider[docker, 0xc0000cd440].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:49:40.951039   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0000cd440].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).olds]: version={2.9.1}
+I0407 13:49:40.951052   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0000cd440].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).news]: version={2.9.1}
+I0407 13:49:40.952089   93788 provider_plugin.go:208] Provider[docker, 0xc0000cd440].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) unimplemented rpc: returning news as is
+I0407 13:49:40.952536   93788 registry.go:156] setProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0407 13:49:40.952580   93788 registry.go:264] ProviderRegistry.Diff(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1,28a25324-7b83-42c3-a702-7a71bf79c34b): executing (#olds=1,#news=1)
+I0407 13:49:40.952595   93788 registry.go:146] GetProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0407 13:49:40.952987   93788 provider_plugin.go:281] Provider[docker, 0xc0000cd440].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:49:40.953029   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0000cd440].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).olds]: version={2.9.1}
+I0407 13:49:40.953041   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0000cd440].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).news]: version={2.9.1}
+I0407 13:49:40.953623   93788 provider_plugin.go:312] Provider[docker, 0xc0000cd440].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) unimplemented rpc: returning DiffUnknown with no replaces
+I0407 13:49:40.953645   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1' after diff (same) (inputs=map[version:{2.9.1}])
+I0407 13:49:40.953669   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:49:40.953676   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:49:40.953698   93788 deployment_executor.go:377] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0407 13:49:40.953711   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:40.953722   93788 step_executor.go:327] StepExecutor worker(-1): registered resource outputs urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image: old=#2, new=#2
+I0407 13:49:40.953739   93788 step_executor.go:327] StepExecutor worker(2): launching oneshot worker
+I0407 13:49:40.953762   93788 step_executor.go:327] StepExecutor worker(2): applying step same on urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1 (preview true)
+I0407 13:49:40.953770   93788 source_eval.go:1029] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=2
+I0407 13:49:40.953785   93788 step_executor.go:327] StepExecutor worker(2): step same on urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1 retired
+I0407 13:49:40.953811   93788 source_eval.go:349] registered default provider for package docker-2.9.1: urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1
+I0407 13:49:40.953858   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.954330   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=true, #props=1, parent=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, protect=false, provider=urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:49:40.954362   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=docker:index/remoteImage:RemoteImage,name=baseBuilder,#props=1
+I0407 13:49:40.954370   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:49:40.954376   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:49:40.954392   93788 registry.go:146] GetProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b)
+I0407 13:49:40.954413   93788 provider_plugin.go:522] Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder) executing (#olds=2,#news=1
+I0407 13:49:40.954427   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).olds]: __defaults={[]}
+I0407 13:49:40.954435   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).olds]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.954431   93788 eventsink.go:59] resource registration successful: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+I0407 13:49:40.954452   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+<{%reset%}>)
+I0407 13:49:40.954442   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).news]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.955768   93788 rpc.go:247] Unmarshaling property for RPC[Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).inputs]: __defaults={[]}
+I0407 13:49:40.955802   93788 rpc.go:247] Unmarshaling property for RPC[Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).inputs]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.955810   93788 provider_plugin.go:594] Provider[docker, 0xc0006a83c0].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder) success: inputs=#2 failures=#0
+I0407 13:49:40.956173   93788 provider_plugin.go:609] Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder): executing (#olds=3,#news=2)
+I0407 13:49:40.956198   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: id={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.956211   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: latest={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d}
+I0407 13:49:40.956218   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.956229   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).news]: __defaults={[]}
+I0407 13:49:40.956240   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).news]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.958217   93788 provider_plugin.go:675] Provider[docker, 0xc0006a83c0].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder) success: changes=1 #replaces=[] #stables=[pullTrigger pullTriggers] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0407 13:49:40.958262   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder' after diff (same) (inputs=map[__defaults:{[]} name:{pierskarsenbarg/dockercache-python:builder}])
+I0407 13:49:40.958302   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:49:40.958317   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:40.958350   93788 step_executor.go:327] StepExecutor worker(3): launching oneshot worker
+I0407 13:49:40.958419   93788 step_executor.go:327] StepExecutor worker(3): applying step same on urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder (preview true)
+I0407 13:49:40.958471   93788 step_executor.go:327] StepExecutor worker(3): step same on urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder retired
+I0407 13:49:40.958487   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder, #outs=3
+I0407 13:49:40.958496   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: id={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.958510   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: latest={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d}
+I0407 13:49:40.958526   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:49:40.959158   93788 eventsink.go:59] resource registration successful: ty=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder
+I0407 13:49:40.959181   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder<{%reset%}>)
+I0407 13:49:40.959851   93788 eventsink.go:59] incoming output property translated: name -> name
+I0407 13:49:40.959863   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: name -> name<{%reset%}>)
+I0407 13:49:40.960116   93788 eventsink.go:59] incoming output value translated: pierskarsenbarg/dockercache-python:builder -> pierskarsenbarg/dockercache-python:builder
+I0407 13:49:40.960135   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: pierskarsenbarg/dockercache-python:builder -> pierskarsenbarg/dockercache-python:builder<{%reset%}>)
+I0407 13:49:40.960341   93788 eventsink.go:59] incoming output property translated: latest -> latest
+I0407 13:49:40.960362   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: latest -> latest<{%reset%}>)
+I0407 13:49:40.960561   93788 eventsink.go:59] incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d
+I0407 13:49:40.960586   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d<{%reset%}>)
+I0407 13:49:40.960776   93788 eventsink.go:59] incoming output property translated: id -> id
+I0407 13:49:40.960796   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: id -> id<{%reset%}>)
+I0407 13:49:40.960978   93788 eventsink.go:59] incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder
+I0407 13:49:40.960995   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder<{%reset%}>)
+I0407 13:49:40.961173   93788 eventsink.go:59] looking for resolver using translated name name
+I0407 13:49:40.961184   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>looking for resolver using translated name name<{%reset%}>)
+I0407 13:49:40.961369   93788 eventsink.go:59] looking for resolver using translated name latest
+I0407 13:49:40.961380   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>looking for resolver using translated name latest<{%reset%}>)
+I0407 13:49:40.961936   93788 eventsink.go:59] All outstanding tasks completed.
+I0407 13:49:40.961952   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>All outstanding tasks completed.<{%reset%}>)
+I0407 13:49:40.962218   93788 eventsink.go:59] waiting for quiescence; 4 RPCs outstanding
+I0407 13:49:40.962230   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 4 RPCs outstanding<{%reset%}>)
+I0407 13:49:40.962451   93788 eventsink.go:59] waiting for quiescence; 3 RPCs outstanding
+I0407 13:49:40.962462   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 3 RPCs outstanding<{%reset%}>)
+I0407 13:49:40.962707   93788 eventsink.go:59] waiting for quiescence; 2 RPCs outstanding
+I0407 13:49:40.962727   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 2 RPCs outstanding<{%reset%}>)
+I0407 13:49:40.962946   93788 eventsink.go:59] waiting for quiescence; 1 RPCs outstanding
+I0407 13:49:40.962957   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 1 RPCs outstanding<{%reset%}>)
+I0407 13:49:40.963143   93788 eventsink.go:59] RPCs successfully completed
+I0407 13:49:40.963156   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0407 13:49:40.963368   93788 eventsink.go:59] No outstanding tasks to complete
+I0407 13:49:40.963382   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>No outstanding tasks to complete<{%reset%}>)
+I0407 13:49:40.963580   93788 eventsink.go:59] run_pulumi_func completed
+I0407 13:49:40.963594   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>run_pulumi_func completed<{%reset%}>)
+I0407 13:49:41.011870   93788 langruntime_plugin.go:171] langhost[python].RunPlan(pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.,...,dryrun=true) success: progerr=
+I0407 13:49:41.013348   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? true, <nil>)
+I0407 13:49:41.013909   93788 deployment_executor.go:314] performDeletes(...): beginning
+I0407 13:49:41.013935   93788 step_generator.go:892] Planner trusts dependency graph, scheduling deletions in parallel
+I0407 13:49:41.013948   93788 step_executor.go:327] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0407 13:49:41.013968   93788 step_executor.go:327] StepExecutor worker(-2): worker received nil chain, exiting
+I0407 13:49:41.013991   93788 step_executor.go:327] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0407 13:49:41.014002   93788 deployment_executor.go:261] deploymentExecutor.Execute(...): step executor has completed
+I0407 13:49:41.014056   93788 deployment_executor.go:132] deploymentExecutor.Execute(...): exiting provider canceller
+I0407 13:49:41.019130   93788 ignore.go:44] Explicitly ignoring and discarding error: rpc error: code = Canceled desc = grpc: the client connection is closing
+I0407 13:49:41.019506   93788 host.go:417] Error closing 'python' language plugin during shutdown; ignoring: 1 error occurred:
+	* operation not permitted
+
+I0407 13:49:54.901336   93788 backend.go:410] found username for access token
+I0407 13:49:55.462522   93788 backend.go:410] found username for access token
+I0407 13:49:55.462084   93788 backend.go:917] Stack dev being updated to version 3
+I0407 13:49:55.921688   93788 plugins.go:77] gatherPluginsFromProgram(): gathering plugins from language host
+I0407 13:49:55.923756   93788 plugins.go:588] GetPluginPath(language, python, <nil>): found on $PATH /Users/piers/.pulumi/bin/pulumi-language-python
+I0407 13:49:55.923858   93788 plugin.go:124] Launching plugin 'python' from '/Users/piers/.pulumi/bin/pulumi-language-python' with args: -virtualenv=venv,127.0.0.1:53655
+I0407 13:49:56.031083   93788 langruntime_plugin.go:178] langhost[python].GetPluginInfo() executing
+I0407 13:49:56.032300   93788 langruntime_plugin.go:91] langhost[python].GetRequiredPlugins(proj=use-cache-python,pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.) executing
+I0407 13:49:57.038109   93788 langruntime_plugin.go:133] langhost[python].GetRequiredPlugins(proj=use-cache-python,pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.) success: #versions=1
+I0407 13:49:57.038166   93788 plugins.go:89] gatherPluginsFromProgram(): plugin python <nil> () is required by language host
+I0407 13:49:57.038189   93788 plugins.go:89] gatherPluginsFromProgram(): plugin docker 2.9.1 () is required by language host
+I0407 13:49:57.038201   93788 plugins.go:101] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0407 13:49:57.038214   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev", not a provider
+I0407 13:49:57.038237   93788 plugins.go:118] gatherPluginsFromSnapshot(): plugin docker 2.9.1 is required by first-class provider "urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1"
+I0407 13:49:57.038250   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image", not a provider
+I0407 13:49:57.038264   93788 plugins.go:110] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder", not a provider
+I0407 13:49:57.038280   93788 plugins.go:133] ensurePluginsAreInstalled(): beginning
+I0407 13:49:57.038460   93788 plugins.go:588] GetPluginPath(language, python, <nil>): found on $PATH /Users/piers/.pulumi/bin/pulumi-language-python
+I0407 13:49:57.038487   93788 plugins.go:138] ensurePluginsAreInstalled(): plugin python <nil> already installed
+I0407 13:49:57.354653   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:49:57.354686   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:49:57.354702   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:49:57.354709   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:49:57.354716   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:49:57.354722   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:49:57.354728   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:49:57.354735   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:49:57.354741   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:49:57.354759   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:49:57.354769   93788 plugins.go:138] ensurePluginsAreInstalled(): plugin docker 2.9.1 already installed
+I0407 13:49:57.354775   93788 plugins.go:153] ensurePluginsAreInstalled(): completed
+I0407 13:49:57.354787   93788 plugins.go:241] computeDefaultProviderPlugins(): considering python
+I0407 13:49:57.354794   93788 plugins.go:244] computeDefaultProviderPlugins(): skipping python, not a resource provider
+I0407 13:49:57.354816   93788 plugins.go:241] computeDefaultProviderPlugins(): considering docker-2.9.1
+I0407 13:49:57.354825   93788 plugins.go:272] computeDefaultProviderPlugins(): plugin docker-2.9.1 selected for package docker (first seen)
+I0407 13:49:57.354833   93788 plugins.go:278] computeDefaultProviderPlugins(): summary of default plugins:
+I0407 13:49:57.354838   93788 plugins.go:280]   docker          = 2.9.1
+I0407 13:49:57.354876   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev): 
+I0407 13:49:57.683414   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:49:57.683448   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:49:57.683463   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:49:57.683470   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:49:57.683477   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:49:57.683483   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:49:57.683489   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:49:57.683495   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:49:57.683501   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:49:57.683516   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:49:57.683537   93788 plugin.go:124] Launching plugin 'docker (resource)' from '/Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker' with args: 127.0.0.1:53655
+I0407 13:49:57.877261   93788 provider_plugin.go:1296] Provider[docker, 0xc000a0c300].GetPluginInfo() executing
+I0407 13:49:57.879894   93788 provider_plugin.go:448] Provider[docker, 0xc000a0c300].Configure() executing (#vars=1)
+I0407 13:49:57.879924   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Configure().inputs]: version={2.9.1}
+I0407 13:49:57.879941   93788 registry.go:134] loaded provider urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b
+I0407 13:49:57.879957   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image): 
+I0407 13:49:57.879963   93788 registry.go:99] provider(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder): urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b
+I0407 13:49:57.880172   93788 step_generator.go:838] stepGenerator.GeneratePendingDeletes(): scanning previous snapshot for pending deletes
+I0407 13:49:57.880192   93788 deployment_executor.go:400] deploymentExecutor.retirePendingDeletes(...): no pending deletions
+I0407 13:49:57.880213   93788 deployment_executor.go:221] deploymentExecutor.Execute(...): waiting for incoming events
+I0407 13:49:57.880231   93788 langruntime_plugin.go:144] langhost[python].Run(pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.,#args=0,proj=use-cache-python,stack=dev,#config=0,dryrun=false) executing
+I0407 13:49:57.880240   93788 step_executor.go:327] StepExecutor worker(-2): worker coming online
+I0407 13:49:57.880272   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:49:58.168755   93788 eventsink.go:59] registering resource: ty=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=False, remote=False
+I0407 13:49:58.168789   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=False, remote=False<{%reset%}>)
+I0407 13:49:58.169203   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:58.169230   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:58.443489   93788 eventsink.go:59] registering module docker:index/container@2.9.1
+I0407 13:49:58.443538   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/container@2.9.1<{%reset%}>)
+I0407 13:49:58.443886   93788 eventsink.go:59] registering module docker:index/network@2.9.1
+I0407 13:49:58.443900   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/network@2.9.1<{%reset%}>)
+I0407 13:49:58.444170   93788 eventsink.go:59] registering module docker:index/plugin@2.9.1
+I0407 13:49:58.444196   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/plugin@2.9.1<{%reset%}>)
+I0407 13:49:58.444430   93788 eventsink.go:59] registering module docker:index/registryImage@2.9.1
+I0407 13:49:58.444445   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/registryImage@2.9.1<{%reset%}>)
+I0407 13:49:58.444700   93788 eventsink.go:59] registering module docker:index/remoteImage@2.9.1
+I0407 13:49:58.444716   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/remoteImage@2.9.1<{%reset%}>)
+I0407 13:49:58.444925   93788 eventsink.go:59] registering module docker:index/secret@2.9.1
+I0407 13:49:58.444936   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/secret@2.9.1<{%reset%}>)
+I0407 13:49:58.445172   93788 eventsink.go:59] registering module docker:index/service@2.9.1
+I0407 13:49:58.445204   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/service@2.9.1<{%reset%}>)
+I0407 13:49:58.445580   93788 eventsink.go:59] registering module docker:index/serviceConfig@2.9.1
+I0407 13:49:58.445620   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/serviceConfig@2.9.1<{%reset%}>)
+I0407 13:49:58.446277   93788 eventsink.go:59] registering module docker:index/volume@2.9.1
+I0407 13:49:58.446319   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering module docker:index/volume@2.9.1<{%reset%}>)
+I0407 13:49:58.450095   93788 eventsink.go:59] registering package docker@2.9.1
+I0407 13:49:58.450133   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering package docker@2.9.1<{%reset%}>)
+I0407 13:49:58.453693   93788 eventsink.go:59] registering resource: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=True, remote=False
+I0407 13:49:58.453771   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=True, remote=False<{%reset%}>)
+I0407 13:49:58.454130   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:58.454156   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:58.455183   93788 eventsink.go:59] adding resolver build
+I0407 13:49:58.455227   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver build<{%reset%}>)
+I0407 13:49:58.455980   93788 eventsink.go:59] adding resolver force_remove
+I0407 13:49:58.456045   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver force_remove<{%reset%}>)
+I0407 13:49:58.457514   93788 eventsink.go:59] adding resolver keep_locally
+I0407 13:49:58.457646   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver keep_locally<{%reset%}>)
+I0407 13:49:58.458253   93788 eventsink.go:59] adding resolver name
+I0407 13:49:58.458285   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver name<{%reset%}>)
+I0407 13:49:58.458694   93788 eventsink.go:59] adding resolver pull_trigger
+I0407 13:49:58.458715   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver pull_trigger<{%reset%}>)
+I0407 13:49:58.459048   93788 eventsink.go:59] adding resolver pull_triggers
+I0407 13:49:58.459095   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver pull_triggers<{%reset%}>)
+I0407 13:49:58.459400   93788 eventsink.go:59] adding resolver latest
+I0407 13:49:58.459421   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver latest<{%reset%}>)
+I0407 13:49:58.459754   93788 eventsink.go:59] adding resolver output
+I0407 13:49:58.459776   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>adding resolver output<{%reset%}>)
+I0407 13:49:58.460431   93788 eventsink.go:59] registering resource: ty=docker:image:Image, name=runtime_image, custom=False, remote=False
+I0407 13:49:58.460485   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=docker:image:Image, name=runtime_image, custom=False, remote=False<{%reset%}>)
+I0407 13:49:58.460737   93788 eventsink.go:59] preparing resource for RPC
+I0407 13:49:58.460750   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource for RPC<{%reset%}>)
+I0407 13:49:58.462916   93788 eventsink.go:59] Waiting for outstanding RPCs to complete
+I0407 13:49:58.462978   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for outstanding RPCs to complete<{%reset%}>)
+I0407 13:49:58.463361   93788 eventsink.go:59] RPCs successfully completed
+I0407 13:49:58.463389   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0407 13:49:58.463839   93788 eventsink.go:59] Waiting for 35 outstanding tasks to complete
+I0407 13:49:58.463873   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for 35 outstanding tasks to complete<{%reset%}>)
+I0407 13:49:58.464633   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:58.464691   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:58.465279   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:58.465316   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:58.465705   93788 eventsink.go:59] beginning rpc register resource
+I0407 13:49:58.465733   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0407 13:49:58.466485   93788 eventsink.go:59] beginning rpc register resource outputs
+I0407 13:49:58.466539   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource outputs<{%reset%}>)
+I0407 13:49:58.466993   93788 eventsink.go:59] preparing resource registration: ty=pulumi:pulumi:Stack, name=use-cache-python-dev
+I0407 13:49:58.467021   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=pulumi:pulumi:Stack, name=use-cache-python-dev<{%reset%}>)
+I0407 13:49:58.467367   93788 eventsink.go:59] resource {} preparing to wait for dependencies
+I0407 13:49:58.467390   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} preparing to wait for dependencies<{%reset%}>)
+I0407 13:49:58.467800   93788 eventsink.go:59] resource {} prepared
+I0407 13:49:58.467828   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} prepared<{%reset%}>)
+I0407 13:49:58.468203   93788 eventsink.go:59] resource registration prepared: ty=pulumi:pulumi:Stack, name=use-cache-python-dev
+I0407 13:49:58.468232   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=pulumi:pulumi:Stack, name=use-cache-python-dev<{%reset%}>)
+I0407 13:49:58.469044   93788 eventsink.go:59] preparing resource registration: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder
+I0407 13:49:58.469067   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder<{%reset%}>)
+I0407 13:49:58.469460   93788 eventsink.go:59] resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} preparing to wait for dependencies
+I0407 13:49:58.469516   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} preparing to wait for dependencies<{%reset%}>)
+I0407 13:49:58.470154   93788 eventsink.go:59] top-level input property translated: name -> name
+I0407 13:49:58.470198   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>top-level input property translated: name -> name<{%reset%}>)
+I0407 13:49:58.470625   93788 eventsink.go:59] preparing resource registration: ty=docker:image:Image, name=runtime_image
+I0407 13:49:58.470651   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>preparing resource registration: ty=docker:image:Image, name=runtime_image<{%reset%}>)
+I0407 13:49:58.470898   93788 eventsink.go:59] resource {} preparing to wait for dependencies
+I0407 13:49:58.470914   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} preparing to wait for dependencies<{%reset%}>)
+I0407 13:50:15.866215   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=use-cache-python-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:50:15.866298   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=use-cache-python-dev,#props=0
+I0407 13:50:15.866321   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:50:15.866330   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:50:15.866349   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev' after diff (same) (inputs=map[])
+I0407 13:50:15.866367   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:50:15.866378   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:50:15.866394   93788 step_executor.go:327] StepExecutor worker(0): launching oneshot worker
+I0407 13:50:15.868381   93788 snapshot.go:130] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev`
+I0407 13:50:15.868437   93788 step_executor.go:327] StepExecutor worker(0): applying step same on urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev (preview false)
+I0407 13:50:15.868855   93788 snapshot.go:266] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0407 13:50:15.868915   93788 snapshot.go:513] Marked old state snapshot as done: urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev
+I0407 13:50:15.868932   93788 snapshot.go:522] Appended new state snapshot to be written: urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev
+I0407 13:50:15.869355   93788 snapshot.go:258] SnapshotManager: mustWrite() false
+I0407 13:50:15.869731   93788 snapshot.go:288] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0407 13:50:15.869770   93788 step_executor.go:327] StepExecutor worker(0): step same on urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev retired
+I0407 13:50:15.869792   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, #outs=0
+I0407 13:50:15.870657   93788 eventsink.go:59] resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev
+I0407 13:50:15.870711   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev<{%reset%}>)
+I0407 13:50:15.871724   93788 eventsink.go:59] resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} prepared
+I0407 13:50:15.871786   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {'build': None, 'force_remove': None, 'keep_locally': None, 'name': 'pierskarsenbarg/dockercache-python:builder', 'pull_trigger': None, 'pull_triggers': None, 'latest': None, 'output': None} prepared<{%reset%}>)
+I0407 13:50:15.872131   93788 eventsink.go:59] resource registration prepared: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder
+I0407 13:50:15.872162   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=docker:index/remoteImage:RemoteImage, name=baseBuilder<{%reset%}>)
+I0407 13:50:15.872985   93788 eventsink.go:59] resource {} prepared
+I0407 13:50:15.873032   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource {} prepared<{%reset%}>)
+I0407 13:50:15.873675   93788 eventsink.go:59] resource registration prepared: ty=docker:image:Image, name=runtime_image
+I0407 13:50:15.873745   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=docker:image:Image, name=runtime_image<{%reset%}>)
+I0407 13:50:15.876873   93788 source_eval.go:316] handling default provider request for package docker-2.9.1
+I0407 13:50:15.876939   93788 source_eval.go:283] newRegisterDefaultProviderEvent(docker-2.9.1): using version 2.9.1 from request
+I0407 13:50:15.876988   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=docker:image:Image, name=runtime_image, custom=false, #props=0, parent=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:50:15.877071   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=docker:image:Image,name=runtime_image,#props=0
+I0407 13:50:15.877108   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:50:15.877118   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:50:15.877141   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image' after diff (same) (inputs=map[])
+I0407 13:50:15.877158   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:50:15.877176   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:50:15.877195   93788 step_executor.go:327] StepExecutor worker(1): launching oneshot worker
+I0407 13:50:15.877257   93788 snapshot.go:130] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image`
+I0407 13:50:15.877270   93788 step_executor.go:327] StepExecutor worker(1): applying step same on urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image (preview false)
+I0407 13:50:15.877284   93788 snapshot.go:266] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0407 13:50:15.877298   93788 snapshot.go:513] Marked old state snapshot as done: urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image
+I0407 13:50:15.877306   93788 snapshot.go:522] Appended new state snapshot to be written: urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image
+I0407 13:50:15.877319   93788 snapshot.go:258] SnapshotManager: mustWrite() false
+I0407 13:50:15.877326   93788 snapshot.go:288] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0407 13:50:15.877342   93788 step_executor.go:327] StepExecutor worker(1): step same on urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image retired
+I0407 13:50:15.877362   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=0
+I0407 13:50:15.877392   93788 source_eval.go:340] waiting for default provider for package docker-2.9.1
+I0407 13:50:15.877414   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=pulumi:providers:docker,name=default_2_9_1,#props=1
+I0407 13:50:15.877438   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:50:15.877448   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:50:15.877466   93788 registry.go:228] ProviderRegistry.Check(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:50:15.877941   93788 eventsink.go:59] resource registration successful: ty=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image
+I0407 13:50:15.877974   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=docker:image:Image, urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image<{%reset%}>)
+I0407 13:50:15.879571   93788 eventsink.go:59] Starting docker build and push...
+I0407 13:50:15.879596   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Starting docker build and push...<{%reset%}>)
+I0407 13:50:15.879888   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Building image './app'...<{%reset%}>)
+I0407 13:50:15.880131   93788 eventsink.go:59] Building container image 'pierskarsenbarg/dockercache-python:latest': context=./app, target=runtime
+I0407 13:50:15.880153   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Building container image 'pierskarsenbarg/dockercache-python:latest': context=./app, target=runtime<{%reset%}>)
+I0407 13:50:15.880433   93788 eventsink.go:59] Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest-builder --target builder ./app'
+I0407 13:50:15.880460   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest-builder --target builder ./app'<{%reset%}>)
+I0407 13:50:15.881117   93788 eventsink.go:94] eventSink::Warning(<{%reset%}>#1 [internal] load build definition from Dockerfile
+#1 sha256:a615fa2f287d13dbac707c9d03848d5a42a1e01c81b3ceda334a58ba47ee38fc
+#1 transferring dockerfile: 37B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:879f1af454461aad8d625867f6e879052c2b56f7e1494374d49ee12263b5aa96
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:15
+#3 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#3 DONE 0.2s
+
+#4 [builder 1/5] FROM docker.io/library/node:15@sha256:c49e0d497dc650c8db7963881977db433f7b39abb82f6812c7ec7ce62cc5a77c
+#4 sha256:7682581d2f9377711a26827a82304f1bedd398502f54b458ded5676a7e228581
+#4 DONE 0.0s
+
+#6 [internal] load build context
+#6 sha256:5a169acda77694d80768a4b590ed6d234f5bc026e2fe2b8a4e22c2d658419221
+#6 transferring context: 60B done
+#6 DONE 0.0s
+
+#8 [builder 4/5] RUN npm i
+#8 sha256:91aeee9d04494c14108684bee9781ac07598557a33f5d0c5a83e7f432fbecefb
+#8 CACHED
+
+#7 [builder 3/5] COPY package.json .
+#7 sha256:ed110721c8168372c21ff5e0957e28e9a445c1b5fd3157068798007cd394f9e0
+#7 CACHED
+
+#5 [builder 2/5] WORKDIR /app
+#5 sha256:306d953f64cc55c6a4846ad5b32a8567eefdbf957d79b636b888afb8c866f864
+#5 CACHED
+
+#9 [builder 5/5] COPY app.js .
+#9 sha256:f6e0a8ae0404c831d7d8e7c21a2ae2a9bc631879c7ecef85248a34ba71f7f736
+#9 CACHED
+
+#10 exporting to image
+#10 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#10 exporting layers done
+#10 writing image sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d done
+#10 naming to docker.io/pierskarsenbarg/dockercache-python:latest-builder done
+#10 DONE 0.0s<{%reset%}>)
+I0407 13:50:15.881820   93788 eventsink.go:59] Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest ./app'
+I0407 13:50:15.881858   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker build --target runtime -t pierskarsenbarg/dockercache-python:latest ./app'<{%reset%}>)
+I0407 13:50:15.882413   93788 eventsink.go:94] eventSink::Warning(<{%reset%}>#1 [internal] load build definition from Dockerfile
+#1 sha256:3d46486faad6fadcb90390d14b08ee383f4cc0ee918e1a7749507863543398de
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:b19ba6d8add928a78feb917dc471c7892739a9e4a746252d3f0cbd1def90c845
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:15
+#4 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#4 ...
+
+#3 [internal] load metadata for docker.io/library/node:15-alpine
+#3 sha256:3dbc53286eb8c9cc61fc3436f438c14e603ff5a4a39b4dbf83e6403c8122734d
+#3 DONE 0.2s
+
+#4 [internal] load metadata for docker.io/library/node:15
+#4 sha256:9c3162ef8609da74f7b658544085f66306e22fc88ddbd3447bf941b04ff848a5
+#4 DONE 0.3s
+
+#5 [runtime 1/3] FROM docker.io/library/node:15-alpine@sha256:fc24d15ecf126b8e6dd954198159407261a780c7684b944c8556f5ddb8bee580
+#5 sha256:c85d417928a699d6f99f4bee32773e2de2726d8021b9d5521e5f28326eeb3969
+#5 DONE 0.0s
+
+#7 [builder 1/5] FROM docker.io/library/node:15@sha256:c49e0d497dc650c8db7963881977db433f7b39abb82f6812c7ec7ce62cc5a77c
+#7 sha256:7682581d2f9377711a26827a82304f1bedd398502f54b458ded5676a7e228581
+#7 DONE 0.0s
+
+#9 [internal] load build context
+#9 sha256:ed77cc15b63de8045c4653312a8aca8444ef40da61d6a9f12ac04dee6b7255aa
+#9 transferring context: 60B done
+#9 DONE 0.0s
+
+#11 [builder 4/5] RUN npm i
+#11 sha256:21c40f8bf213af5b97b37b32037ef256d13d5fe6489e01780dd71f25af505d84
+#11 CACHED
+
+#12 [builder 5/5] COPY app.js .
+#12 sha256:f36b691640c3180342a3f29c62d8490836849577d912ec1d6a722c57b591695a
+#12 CACHED
+
+#10 [builder 3/5] COPY package.json .
+#10 sha256:b1225b1846f3d881746e7b2287cd141409372aeb5388d59148e70acfd02bcd36
+#10 CACHED
+
+#8 [builder 2/5] WORKDIR /app
+#8 sha256:306d953f64cc55c6a4846ad5b32a8567eefdbf957d79b636b888afb8c866f864
+#8 CACHED
+
+#6 [runtime 2/3] WORKDIR /app
+#6 sha256:94bd450e5b78b0493d49c54cc41a7a786e5b487d7af2bfd526c402661cbeb184
+#6 CACHED
+
+#13 [runtime 3/3] COPY --from=builder /app .
+#13 sha256:41bc6e0b096b25b12ee1b2da821309115bbca4665eafc8a9ce2f6a8c2fe1ca28
+#13 CACHED
+
+#14 exporting to image
+#14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#14 exporting layers done
+#14 writing image sha256:0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67 done
+#14 naming to docker.io/pierskarsenbarg/dockercache-python:latest done
+#14 DONE 0.0s<{%reset%}>)
+I0407 13:50:15.882937   93788 eventsink.go:59] Executing 'docker image inspect -f {{.Id}} pierskarsenbarg/dockercache-python:latest'
+I0407 13:50:15.882971   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker image inspect -f {{.Id}} pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:50:15.883357   93788 eventsink.go:70] eventSink::Info(<{%reset%}>sha256:0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67<{%reset%}>)
+I0407 13:50:15.883883   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Image build succeeded.<{%reset%}>)
+I0407 13:50:15.884692   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Pushing image 'pierskarsenbarg/dockercache-python:latest'...<{%reset%}>)
+I0407 13:50:15.885819   93788 eventsink.go:59] Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67'
+I0407 13:50:15.885875   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67'<{%reset%}>)
+I0407 13:50:15.886635   93788 eventsink.go:59] Executing 'docker push pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67'
+I0407 13:50:15.886706   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker push pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67'<{%reset%}>)
+I0407 13:50:15.887512   93788 eventsink.go:70] eventSink::Info(<{%reset%}>The push refers to repository [docker.io/pierskarsenbarg/dockercache-python]<{%reset%}>)
+I0407 13:50:15.888139   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Preparing<{%reset%}>)
+I0407 13:50:15.888890   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Preparing<{%reset%}>)
+I0407 13:50:15.890659   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Preparing<{%reset%}>)
+I0407 13:50:15.891956   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Preparing<{%reset%}>)
+I0407 13:50:15.892903   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Preparing<{%reset%}>)
+I0407 13:50:15.893592   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Preparing<{%reset%}>)
+I0407 13:50:15.894449   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Waiting<{%reset%}>)
+I0407 13:50:15.895014   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Layer already exists<{%reset%}>)
+I0407 13:50:15.895605   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Layer already exists<{%reset%}>)
+I0407 13:50:15.896357   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Layer already exists<{%reset%}>)
+I0407 13:50:15.897188   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Layer already exists<{%reset%}>)
+I0407 13:50:15.898338   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Layer already exists<{%reset%}>)
+I0407 13:50:15.900064   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Layer already exists<{%reset%}>)
+I0407 13:50:15.901271   93788 eventsink.go:70] eventSink::Info(<{%reset%}>latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67: digest: sha256:d584441e30a9882b0f988ef8737cdd75c6d2d5fa6fece8cdc7b2ca72e3399cab size: 1575<{%reset%}>)
+I0407 13:50:15.902232   93788 eventsink.go:59] Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest'
+I0407 13:50:15.902289   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:50:15.902960   93788 eventsink.go:59] Executing 'docker push pierskarsenbarg/dockercache-python:latest'
+I0407 13:50:15.903080   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker push pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:50:15.903864   93788 eventsink.go:70] eventSink::Info(<{%reset%}>The push refers to repository [docker.io/pierskarsenbarg/dockercache-python]<{%reset%}>)
+I0407 13:50:15.904392   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Preparing<{%reset%}>)
+I0407 13:50:15.905704   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Preparing<{%reset%}>)
+I0407 13:50:15.906700   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Preparing<{%reset%}>)
+I0407 13:50:15.907508   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Preparing<{%reset%}>)
+I0407 13:50:15.908330   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Preparing<{%reset%}>)
+I0407 13:50:15.909547   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Preparing<{%reset%}>)
+I0407 13:50:15.910739   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Waiting<{%reset%}>)
+I0407 13:50:15.912138   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Layer already exists<{%reset%}>)
+I0407 13:50:15.913274   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Layer already exists<{%reset%}>)
+I0407 13:50:15.914307   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Layer already exists<{%reset%}>)
+I0407 13:50:15.915019   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Layer already exists<{%reset%}>)
+I0407 13:50:15.915705   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Layer already exists<{%reset%}>)
+I0407 13:50:15.916474   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Layer already exists<{%reset%}>)
+I0407 13:50:15.917351   93788 eventsink.go:70] eventSink::Info(<{%reset%}>latest: digest: sha256:d584441e30a9882b0f988ef8737cdd75c6d2d5fa6fece8cdc7b2ca72e3399cab size: 1575<{%reset%}>)
+I0407 13:50:15.918260   93788 eventsink.go:59] Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest'
+I0407 13:50:15.918326   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker tag pierskarsenbarg/dockercache-python:latest pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:50:15.919083   93788 eventsink.go:59] Executing 'docker push pierskarsenbarg/dockercache-python:latest'
+I0407 13:50:15.919128   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker push pierskarsenbarg/dockercache-python:latest'<{%reset%}>)
+I0407 13:50:15.919637   93788 eventsink.go:70] eventSink::Info(<{%reset%}>The push refers to repository [docker.io/pierskarsenbarg/dockercache-python]<{%reset%}>)
+I0407 13:50:15.920169   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Preparing<{%reset%}>)
+I0407 13:50:15.921192   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Preparing<{%reset%}>)
+I0407 13:50:15.922485   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Preparing<{%reset%}>)
+I0407 13:50:15.923271   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Preparing<{%reset%}>)
+I0407 13:50:15.924279   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Preparing<{%reset%}>)
+I0407 13:50:15.925181   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Preparing<{%reset%}>)
+I0407 13:50:15.926905   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Waiting<{%reset%}>)
+I0407 13:50:15.927721   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b7c6dc5e40b2: Layer already exists<{%reset%}>)
+I0407 13:50:15.929098   93788 eventsink.go:70] eventSink::Info(<{%reset%}>55f258e74516: Layer already exists<{%reset%}>)
+I0407 13:50:15.930412   93788 eventsink.go:70] eventSink::Info(<{%reset%}>c107ddaa895b: Layer already exists<{%reset%}>)
+I0407 13:50:15.932167   93788 eventsink.go:70] eventSink::Info(<{%reset%}>549f32ea0f83: Layer already exists<{%reset%}>)
+I0407 13:50:15.933108   93788 eventsink.go:70] eventSink::Info(<{%reset%}>ae453a93a761: Layer already exists<{%reset%}>)
+I0407 13:50:15.934210   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2b2bcc6e6724: Layer already exists<{%reset%}>)
+I0407 13:50:15.934926   93788 eventsink.go:70] eventSink::Info(<{%reset%}>latest: digest: sha256:d584441e30a9882b0f988ef8737cdd75c6d2d5fa6fece8cdc7b2ca72e3399cab size: 1575<{%reset%}>)
+I0407 13:50:15.935734   93788 eventsink.go:59] Executing 'docker tag pierskarsenbarg/dockercache-python:latest-builder pierskarsenbarg/dockercache-python:builder'
+I0407 13:50:15.935797   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker tag pierskarsenbarg/dockercache-python:latest-builder pierskarsenbarg/dockercache-python:builder'<{%reset%}>)
+I0407 13:50:15.936663   93788 eventsink.go:59] Executing 'docker push pierskarsenbarg/dockercache-python:builder'
+I0407 13:50:15.936762   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Executing 'docker push pierskarsenbarg/dockercache-python:builder'<{%reset%}>)
+I0407 13:50:15.937995   93788 eventsink.go:70] eventSink::Info(<{%reset%}>The push refers to repository [docker.io/pierskarsenbarg/dockercache-python]<{%reset%}>)
+I0407 13:50:15.938895   93788 eventsink.go:70] eventSink::Info(<{%reset%}>4b11170f769b: Preparing<{%reset%}>)
+I0407 13:50:15.939872   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2412ec88fa59: Preparing<{%reset%}>)
+I0407 13:50:15.940721   93788 eventsink.go:70] eventSink::Info(<{%reset%}>49eaf6245c21: Preparing<{%reset%}>)
+I0407 13:50:15.941632   93788 eventsink.go:70] eventSink::Info(<{%reset%}>a89f5ff712d3: Preparing<{%reset%}>)
+I0407 13:50:15.942979   93788 eventsink.go:70] eventSink::Info(<{%reset%}>74a0279c3c6a: Preparing<{%reset%}>)
+I0407 13:50:15.943952   93788 eventsink.go:70] eventSink::Info(<{%reset%}>33dbb053a190: Preparing<{%reset%}>)
+I0407 13:50:15.944911   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b11543b8f372: Preparing<{%reset%}>)
+I0407 13:50:15.945546   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3dd8c0438e7e: Preparing<{%reset%}>)
+I0407 13:50:15.946214   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3da373b12072: Preparing<{%reset%}>)
+I0407 13:50:15.946837   93788 eventsink.go:70] eventSink::Info(<{%reset%}>6f562b6e2ead: Preparing<{%reset%}>)
+I0407 13:50:15.947463   93788 eventsink.go:70] eventSink::Info(<{%reset%}>90707c11bb17: Preparing<{%reset%}>)
+I0407 13:50:15.948415   93788 eventsink.go:70] eventSink::Info(<{%reset%}>53880c3b885f: Preparing<{%reset%}>)
+I0407 13:50:15.949438   93788 eventsink.go:70] eventSink::Info(<{%reset%}>44f663453d2d: Preparing<{%reset%}>)
+I0407 13:50:15.950799   93788 eventsink.go:70] eventSink::Info(<{%reset%}>33dbb053a190: Waiting<{%reset%}>)
+I0407 13:50:15.952029   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b11543b8f372: Waiting<{%reset%}>)
+I0407 13:50:15.953593   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3dd8c0438e7e: Waiting<{%reset%}>)
+I0407 13:50:15.954711   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3da373b12072: Waiting<{%reset%}>)
+I0407 13:50:15.955698   93788 eventsink.go:70] eventSink::Info(<{%reset%}>6f562b6e2ead: Waiting<{%reset%}>)
+I0407 13:50:15.956515   93788 eventsink.go:70] eventSink::Info(<{%reset%}>90707c11bb17: Waiting<{%reset%}>)
+I0407 13:50:15.957380   93788 eventsink.go:70] eventSink::Info(<{%reset%}>53880c3b885f: Waiting<{%reset%}>)
+I0407 13:50:15.958097   93788 eventsink.go:70] eventSink::Info(<{%reset%}>44f663453d2d: Waiting<{%reset%}>)
+I0407 13:50:15.959150   93788 eventsink.go:70] eventSink::Info(<{%reset%}>a89f5ff712d3: Layer already exists<{%reset%}>)
+I0407 13:50:15.960765   93788 eventsink.go:70] eventSink::Info(<{%reset%}>4b11170f769b: Layer already exists<{%reset%}>)
+I0407 13:50:15.961908   93788 eventsink.go:70] eventSink::Info(<{%reset%}>49eaf6245c21: Layer already exists<{%reset%}>)
+I0407 13:50:15.963017   93788 eventsink.go:70] eventSink::Info(<{%reset%}>2412ec88fa59: Layer already exists<{%reset%}>)
+I0407 13:50:15.964157   93788 eventsink.go:70] eventSink::Info(<{%reset%}>74a0279c3c6a: Layer already exists<{%reset%}>)
+I0407 13:50:15.965153   93788 eventsink.go:70] eventSink::Info(<{%reset%}>b11543b8f372: Layer already exists<{%reset%}>)
+I0407 13:50:15.965976   93788 eventsink.go:70] eventSink::Info(<{%reset%}>33dbb053a190: Layer already exists<{%reset%}>)
+I0407 13:50:15.966942   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3dd8c0438e7e: Layer already exists<{%reset%}>)
+I0407 13:50:15.967852   93788 eventsink.go:70] eventSink::Info(<{%reset%}>6f562b6e2ead: Layer already exists<{%reset%}>)
+I0407 13:50:15.968629   93788 eventsink.go:70] eventSink::Info(<{%reset%}>3da373b12072: Layer already exists<{%reset%}>)
+I0407 13:50:15.969707   93788 eventsink.go:70] eventSink::Info(<{%reset%}>90707c11bb17: Layer already exists<{%reset%}>)
+I0407 13:50:15.970414   93788 eventsink.go:70] eventSink::Info(<{%reset%}>53880c3b885f: Layer already exists<{%reset%}>)
+I0407 13:50:15.971157   93788 eventsink.go:70] eventSink::Info(<{%reset%}>44f663453d2d: Layer already exists<{%reset%}>)
+I0407 13:50:15.972009   93788 eventsink.go:70] eventSink::Info(<{%reset%}>builder: digest: sha256:6e294fc00c401fcc0f9f39d6c9da171ab4ce88333fd9f34b6174cfeb77622fa9 size: 3047<{%reset%}>)
+I0407 13:50:15.972893   93788 eventsink.go:70] eventSink::Info(<{%reset%}>Image push succeeded.<{%reset%}>)
+I0407 13:50:15.973629   93788 eventsink.go:59] Successfully pushed to docker
+I0407 13:50:15.973676   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>Successfully pushed to docker<{%reset%}>)
+I0407 13:50:15.975489   93788 eventsink.go:59] register resource outputs prepared: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+I0407 13:50:15.975596   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>register resource outputs prepared: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+<{%reset%}>)
+I0407 13:50:15.976651   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResourceOutputs(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image)]: base_image_name={pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67}
+I0407 13:50:15.976702   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResourceOutputs(urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image)]: image_name={pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67}
+I0407 13:50:15.976727   93788 source_eval.go:1005] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=2
+I0407 13:50:15.976757   93788 source_eval.go:163] EvalSourceIterator produced a completion: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image,#outs=2
+I0407 13:50:16.232140   93788 plugins.go:627] GetPluginPath(resource, docker, 2.9.1): enabling new plugin behavior
+I0407 13:50:16.232178   93788 plugins.go:709] SelectCompatiblePlugin(..., docker): beginning
+I0407 13:50:16.232197   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.0.0: semver mismatch
+I0407 13:50:16.232206   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.5.0: semver mismatch
+I0407 13:50:16.232214   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.6.1: semver mismatch
+I0407 13:50:16.232223   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.8.1: semver mismatch
+I0407 13:50:16.232231   93788 plugins.go:742] SelectCompatiblePlugin(..., docker): skipping plugin docker-2.9.0: semver mismatch
+I0407 13:50:16.232239   93788 plugins.go:738] SelectCompatiblePlugin(..., docker): best plugin docker-2.9.1: semver match
+I0407 13:50:16.232247   93788 plugins.go:751] SelectCompatiblePlugin(..., docker): selecting plugin 'docker-2.9.1': best match 
+I0407 13:50:16.232262   93788 plugins.go:674] GetPluginPath(resource, docker, 2.9.1): found in cache at /Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker
+I0407 13:50:16.232283   93788 plugin.go:124] Launching plugin 'docker (resource)' from '/Users/piers/.pulumi/plugins/resource-docker-v2.9.1/pulumi-resource-docker' with args: 127.0.0.1:53655
+I0407 13:50:16.272812   93788 provider_plugin.go:1296] Provider[docker, 0xc001de0600].GetPluginInfo() executing
+I0407 13:50:16.273178   93788 provider_plugin.go:176] Provider[docker, 0xc001de0600].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:50:16.273206   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc001de0600].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).olds]: version={2.9.1}
+I0407 13:50:16.273223   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc001de0600].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).news]: version={2.9.1}
+I0407 13:50:16.273675   93788 provider_plugin.go:208] Provider[docker, 0xc001de0600].CheckConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) unimplemented rpc: returning news as is
+I0407 13:50:16.273701   93788 registry.go:156] setProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0407 13:50:16.273726   93788 registry.go:264] ProviderRegistry.Diff(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1,28a25324-7b83-42c3-a702-7a71bf79c34b): executing (#olds=1,#news=1)
+I0407 13:50:16.273735   93788 registry.go:146] GetProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0407 13:50:16.273749   93788 provider_plugin.go:281] Provider[docker, 0xc001de0600].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) executing (#olds=1,#news=1)
+I0407 13:50:16.273758   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc001de0600].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).olds]: version={2.9.1}
+I0407 13:50:16.273768   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc001de0600].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1).news]: version={2.9.1}
+I0407 13:50:16.273988   93788 provider_plugin.go:312] Provider[docker, 0xc001de0600].DiffConfig(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1) unimplemented rpc: returning DiffUnknown with no replaces
+I0407 13:50:16.274009   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1' after diff (same) (inputs=map[version:{2.9.1}])
+I0407 13:50:16.274036   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:50:16.274042   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:50:16.274046   93788 deployment_executor.go:377] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0407 13:50:16.274083   93788 step_executor.go:327] StepExecutor worker(2): launching oneshot worker
+I0407 13:50:16.274094   93788 step_executor.go:327] StepExecutor worker(-1): registered resource outputs urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image: old=#2, new=#2
+I0407 13:50:16.274073   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:50:16.274102   93788 snapshot.go:130] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1`
+I0407 13:50:16.274207   93788 step_executor.go:327] StepExecutor worker(2): applying step same on urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1 (preview false)
+I0407 13:50:16.274239   93788 snapshot.go:266] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0407 13:50:16.549836   93788 snapshot.go:513] Marked old state snapshot as done: urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1
+I0407 13:50:16.550083   93788 snapshot.go:522] Appended new state snapshot to be written: urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1
+I0407 13:50:16.549930   93788 source_eval.go:1029] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, #outs=2
+I0407 13:50:16.550191   93788 snapshot.go:258] SnapshotManager: mustWrite() false
+I0407 13:50:16.550376   93788 snapshot.go:288] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0407 13:50:16.550454   93788 step_executor.go:327] StepExecutor worker(2): step same on urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1 retired
+I0407 13:50:16.550541   93788 source_eval.go:349] registered default provider for package docker-2.9.1: urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1
+I0407 13:50:16.550729   93788 rpc.go:247] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.550887   93788 source_eval.go:873] ResourceMonitor.RegisterResource received: t=docker:index/remoteImage:RemoteImage, name=baseBuilder, custom=true, #props=1, parent=urn:pulumi:dev::use-cache-python::pulumi:pulumi:Stack::use-cache-python-dev, protect=false, provider=urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}
+I0407 13:50:16.550983   93788 source_eval.go:158] EvalSourceIterator produced a registration: t=docker:index/remoteImage:RemoteImage,name=baseBuilder,#props=1
+I0407 13:50:16.551031   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0407 13:50:16.551063   93788 deployment_executor.go:371] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0407 13:50:16.551138   93788 registry.go:146] GetProvider(urn:pulumi:dev::use-cache-python::pulumi:providers:docker::default_2_9_1::28a25324-7b83-42c3-a702-7a71bf79c34b)
+I0407 13:50:16.551184   93788 provider_plugin.go:522] Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder) executing (#olds=2,#news=1
+I0407 13:50:16.551230   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).olds]: __defaults={[]}
+I0407 13:50:16.551267   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).olds]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.551316   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).news]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.552793   93788 eventsink.go:59] resource registration successful: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+I0407 13:50:16.552986   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: urn=urn:pulumi:dev::use-cache-python::docker:image:Image::runtime_image, props=fields {
+  key: "base_image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+fields {
+  key: "image_name"
+  value {
+    string_value: "pierskarsenbarg/dockercache-python:latest-0583f9fbd100a7f33382c31413359be4dba5936a1db946ea9082125368b95d67"
+  }
+}
+<{%reset%}>)
+I0407 13:50:16.553407   93788 rpc.go:247] Unmarshaling property for RPC[Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).inputs]: __defaults={[]}
+I0407 13:50:16.553477   93788 rpc.go:247] Unmarshaling property for RPC[Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder).inputs]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.553510   93788 provider_plugin.go:594] Provider[docker, 0xc000a0c300].Check(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder) success: inputs=#2 failures=#0
+I0407 13:50:16.553577   93788 provider_plugin.go:609] Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder): executing (#olds=3,#news=2)
+I0407 13:50:16.553609   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: id={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.553641   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: latest={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d}
+I0407 13:50:16.553683   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).olds]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.553709   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).news]: __defaults={[]}
+I0407 13:50:16.553735   93788 rpc.go:72] Marshaling property for RPC[Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder).news]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.556797   93788 provider_plugin.go:675] Provider[docker, 0xc000a0c300].Diff(urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder,sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder) success: changes=1 #replaces=[] #stables=[pullTrigger pullTriggers] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0407 13:50:16.556887   93788 step_generator.go:458] Planner decided not to update 'urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder' after diff (same) (inputs=map[__defaults:{[]} name:{pierskarsenbarg/dockercache-python:builder}])
+I0407 13:50:16.556996   93788 step_executor.go:327] StepExecutor worker(-2): worker received chain for execution
+I0407 13:50:16.557077   93788 step_executor.go:327] StepExecutor worker(-2): worker waiting for incoming chains
+I0407 13:50:16.557162   93788 step_executor.go:327] StepExecutor worker(3): launching oneshot worker
+I0407 13:50:16.557336   93788 snapshot.go:130] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder`
+I0407 13:50:16.557380   93788 step_executor.go:327] StepExecutor worker(3): applying step same on urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder (preview false)
+I0407 13:50:16.557490   93788 snapshot.go:266] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0407 13:50:16.557551   93788 snapshot.go:513] Marked old state snapshot as done: urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder
+I0407 13:50:16.557573   93788 snapshot.go:522] Appended new state snapshot to be written: urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder
+I0407 13:50:16.557609   93788 snapshot.go:258] SnapshotManager: mustWrite() false
+I0407 13:50:16.557630   93788 snapshot.go:288] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0407 13:50:16.557668   93788 step_executor.go:327] StepExecutor worker(3): step same on urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder retired
+I0407 13:50:16.557714   93788 source_eval.go:960] ResourceMonitor.RegisterResource operation finished: t=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder, #outs=3
+I0407 13:50:16.557749   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: id={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.557786   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: latest={sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d}
+I0407 13:50:16.557822   93788 rpc.go:72] Marshaling property for RPC[ResourceMonitor.RegisterResource(docker:index/remoteImage:RemoteImage,baseBuilder)]: name={pierskarsenbarg/dockercache-python:builder}
+I0407 13:50:16.559202   93788 eventsink.go:59] resource registration successful: ty=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder
+I0407 13:50:16.559265   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=docker:index/remoteImage:RemoteImage, urn=urn:pulumi:dev::use-cache-python::docker:index/remoteImage:RemoteImage::baseBuilder<{%reset%}>)
+I0407 13:50:16.560882   93788 eventsink.go:59] incoming output property translated: name -> name
+I0407 13:50:16.560928   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: name -> name<{%reset%}>)
+I0407 13:50:16.561476   93788 eventsink.go:59] incoming output value translated: pierskarsenbarg/dockercache-python:builder -> pierskarsenbarg/dockercache-python:builder
+I0407 13:50:16.561521   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: pierskarsenbarg/dockercache-python:builder -> pierskarsenbarg/dockercache-python:builder<{%reset%}>)
+I0407 13:50:16.561936   93788 eventsink.go:59] incoming output property translated: latest -> latest
+I0407 13:50:16.561983   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: latest -> latest<{%reset%}>)
+I0407 13:50:16.562477   93788 eventsink.go:59] incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d
+I0407 13:50:16.562519   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6d<{%reset%}>)
+I0407 13:50:16.563053   93788 eventsink.go:59] incoming output property translated: id -> id
+I0407 13:50:16.563091   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output property translated: id -> id<{%reset%}>)
+I0407 13:50:16.563522   93788 eventsink.go:59] incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder
+I0407 13:50:16.563572   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>incoming output value translated: sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder -> sha256:5d6c7987af05177483502c010290bef345b779838055d54ee3f889fb6740ce6dpierskarsenbarg/dockercache-python:builder<{%reset%}>)
+I0407 13:50:16.564073   93788 eventsink.go:59] looking for resolver using translated name name
+I0407 13:50:16.564127   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>looking for resolver using translated name name<{%reset%}>)
+I0407 13:50:16.564639   93788 eventsink.go:59] looking for resolver using translated name latest
+I0407 13:50:16.564677   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>looking for resolver using translated name latest<{%reset%}>)
+I0407 13:50:16.565950   93788 eventsink.go:59] All outstanding tasks completed.
+I0407 13:50:16.565998   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>All outstanding tasks completed.<{%reset%}>)
+I0407 13:50:16.567582   93788 eventsink.go:59] waiting for quiescence; 4 RPCs outstanding
+I0407 13:50:16.567623   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 4 RPCs outstanding<{%reset%}>)
+I0407 13:50:16.568201   93788 eventsink.go:59] waiting for quiescence; 3 RPCs outstanding
+I0407 13:50:16.568244   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 3 RPCs outstanding<{%reset%}>)
+I0407 13:50:16.568774   93788 eventsink.go:59] waiting for quiescence; 2 RPCs outstanding
+I0407 13:50:16.568808   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 2 RPCs outstanding<{%reset%}>)
+I0407 13:50:16.569304   93788 eventsink.go:59] waiting for quiescence; 1 RPCs outstanding
+I0407 13:50:16.569329   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 1 RPCs outstanding<{%reset%}>)
+I0407 13:50:16.569715   93788 eventsink.go:59] RPCs successfully completed
+I0407 13:50:16.569742   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0407 13:50:16.570139   93788 eventsink.go:59] No outstanding tasks to complete
+I0407 13:50:16.570163   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>No outstanding tasks to complete<{%reset%}>)
+I0407 13:50:16.570514   93788 eventsink.go:59] run_pulumi_func completed
+I0407 13:50:16.570554   93788 eventsink.go:62] eventSink::Debug(<{%reset%}>run_pulumi_func completed<{%reset%}>)
+I0407 13:50:16.618687   93788 langruntime_plugin.go:171] langhost[python].RunPlan(pwd=/Users/piers/github.com/pierskarsenbarg/pulumi-demos/docker-cache-python/use-cache,program=.,...,dryrun=false) success: progerr=
+I0407 13:50:16.619717   93788 deployment_executor.go:225] deploymentExecutor.Execute(...): incoming event (nil? true, <nil>)
+I0407 13:50:16.619751   93788 deployment_executor.go:314] performDeletes(...): beginning
+I0407 13:50:16.619766   93788 step_generator.go:892] Planner trusts dependency graph, scheduling deletions in parallel
+I0407 13:50:16.619792   93788 step_executor.go:327] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0407 13:50:16.619816   93788 step_executor.go:327] StepExecutor worker(-2): worker received nil chain, exiting
+I0407 13:50:16.619828   93788 step_executor.go:327] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0407 13:50:16.619841   93788 deployment_executor.go:261] deploymentExecutor.Execute(...): step executor has completed
+I0407 13:50:16.619913   93788 deployment_executor.go:132] deploymentExecutor.Execute(...): exiting provider canceller
+I0407 13:50:16.623530   93788 ignore.go:44] Explicitly ignoring and discarding error: rpc error: code = Canceled desc = grpc: the client connection is closing
+I0407 13:50:16.623588   93788 host.go:417] Error closing 'python' language plugin during shutdown; ignoring: 1 error occurred:
+	* operation not permitted
+
+I0407 13:50:16.851713   93788 snapshot.go:664] SnapshotManager: flushing elided writes...
