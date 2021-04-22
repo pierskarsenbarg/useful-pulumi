@@ -27,7 +27,7 @@ if (useDefaultVpc === "true") {
 }
 
 const ami = pulumi.output(
-  aws.getAmi({
+  aws.ec2.getAmi({
     filters: [
       {
         name: "name",

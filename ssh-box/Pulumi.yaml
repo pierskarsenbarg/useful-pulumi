@@ -1,3 +1,13 @@
 name: ssh-box
 runtime: nodejs
 description: Quick program for when you need a box to ssh into on the internet
+template: 
+  config:
+    aws:region:
+      description: AWS region to deploy to
+      default: eu-west-1
+    publicKey:
+      description: SSH key of person who needs access
+      secret: true
+    useDefaultVpc:
+      description: Chooose whether to use the default VPC or create a new one
