@@ -1,0 +1,11 @@
+{
+  "name": "apprunner",
+  "devDependencies": {
+    "@types/node": "^10.0.0"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^4.5.1",
+    "@pulumi/docker": "^3.0.0",
+    "@pulumi/pulumi": "^3.0.0"
+  }
+}
