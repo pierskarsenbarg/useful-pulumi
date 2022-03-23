@@ -1,3 +1,0 @@
-name: aws-secrets-manager
-runtime: nodejs
-description: Demo showing how to set up AWS secrets manager
