@@ -47,7 +47,7 @@ const sshSG = new aws.ec2.SecurityGroup("sshSG", {
       toPort: 22,
       fromPort: 22,
       protocol: "tcp",
-      cidrBlocks: ["86.28.229.82/32"],
+      cidrBlocks: ["86.28.239.57/32"],
     },
   ],
   egress: [
