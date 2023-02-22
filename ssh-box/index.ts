@@ -17,7 +17,7 @@ if (useDefaultVpc === "true") {
 } else {
   vpc = new awsx.ec2.Vpc("vpc", {
     subnets: [{ type: "public" }],
-    numberOfAvailabilityZones: "all",
+    numberOfAvailabilityZones: 1,
     tags: {
       ...basicTags,
       Name: "piers-vpc",
@@ -34,7 +34,7 @@ const ami = pulumi.output(
         values: ["amzn-ami-hvm-*"],
       },
     ],
-    owners: ["137112412989"], // This owner ID is Amazon
+    owners: ["amazon"], // This owner ID is Amazon
     mostRecent: true,
   })
 );
@@ -46,6 +46,12 @@ const sshSG = new aws.ec2.SecurityGroup("sshSG", {
     {
       toPort: 22,
       fromPort: 22,
+      protocol: "tcp",
+      cidrBlocks: ["86.28.239.57/32"],
+    },
+    {
+      toPort: 8000,
+      fromPort: 8000,
       protocol: "tcp",
       cidrBlocks: ["86.28.239.57/32"],
     },
