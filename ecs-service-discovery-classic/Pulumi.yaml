@@ -1,0 +1,3 @@
+name: ecs-service-discovery-classic
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
