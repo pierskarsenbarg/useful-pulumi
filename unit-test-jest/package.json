@@ -1,0 +1,16 @@
+{
+    "name": "unit-test-jest",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/jest": "^29.4.0",
+        "@types/node": "^16.18.12",
+        "ts-jest": "^29.0.5"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/random": "^4.11.2"
+    },
+    "scripts": {
+        "test": "jest"
+    }
+}
