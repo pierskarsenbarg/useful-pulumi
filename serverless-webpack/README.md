@@ -12,7 +12,7 @@ You must have the following installed:
 1. Clone repo: `git clone https://github.com/pierskarsenbarg/pulumi-demos
 1. Change to directory: `cd serverless-webpack`
 1. Install dependencies: `npm install`
-1. Run test: `npm run push`
+1. Deploy: `npm run push`
 
 ## Notes
 
