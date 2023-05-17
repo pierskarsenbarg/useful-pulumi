@@ -1,0 +1,3 @@
+name: api-gateway-lambda
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
