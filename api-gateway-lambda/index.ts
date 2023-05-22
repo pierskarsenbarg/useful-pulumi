@@ -1,5 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
+import * as path from "path";
+import {hashPath} from "./utils";
 
 const role = new aws.iam.Role("lambda-role", {
   assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal(
@@ -51,7 +53,8 @@ const methodResponse = new aws.apigateway.MethodResponse("methodresponse", {
   resourceId: api.rootResourceId,
   restApi: api.id,
   statusCode: "200",
-});
+}, {dependsOn: [integrationresponse]});
+
 
 const permission = new aws.lambda.Permission("permission", {
   action: "lambda:InvokeFunction",
@@ -62,15 +65,22 @@ const permission = new aws.lambda.Permission("permission", {
 
 const deployment = new aws.apigateway.Deployment("deployment", {
   restApi: api.id,
+  triggers: {
+    redeployment: hashPath(path.join(__filename))
+  }
 }, {
     // These are all required otherwise the deployment will fail
-    dependsOn: [integration, integrationresponse, method, methodResponse]
+    dependsOn: [
+      integration, 
+      integrationresponse, 
+      method, 
+      methodResponse]
 });
 
 const stage = new aws.apigateway.Stage("stage", {
   deployment: deployment.id,
   restApi: api.id,
-  stageName: "dev",
+  stageName: pulumi.getStack(),
 });
 
 export const url = pulumi.interpolate`${stage.invokeUrl}/`;
