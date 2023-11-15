@@ -17,13 +17,16 @@ const vpc = new awsx.ec2.Vpc("vpc", {
     }
 });
 
+export const vpcid = vpc.vpcId
+
 const repo = new awsx.ecr.Repository("repo", {
     forceDelete: true
 });
 
 const image = new awsx.ecr.Image("app-image", {
     repositoryUrl: repo.url,
-    path: "./app"
+    context: "./app",
+    platform: "linux/amd64"
 });
 
 const discoveryNamespace = new aws.servicediscovery.HttpNamespace("discoveryApp");
@@ -206,13 +209,13 @@ const appService = new aws.ecs.Service("appService", {
     serviceConnectConfiguration: {
         enabled: true,
         namespace: discoveryNamespace.arn,
-        service: {
+        services: [{
             portName: "app-port",
-            clientAliases: [{
+            clientAlias: [{
                 port: 3000,
                 dnsName: "app"
             }]
-        }
+        }]
     }
 });
 
@@ -231,13 +234,13 @@ const redisService = new aws.ecs.Service("redisService", {
     serviceConnectConfiguration: {
         enabled: true,
         namespace: discoveryNamespace.arn,
-        service: {
+        services: [{
             portName: "redis-port",
-            clientAliases: [{
+            clientAlias: [{
                 port: 6379,
                 dnsName: "redis"
             }]
-        }
+        }]
     }
 });
 
