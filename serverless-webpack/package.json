@@ -9,8 +9,8 @@
         "webpack-cli": "^5.0.1"
     },
     "dependencies": {
+        "@aws-lambda-powertools/logger": "^2.1.0",
         "@pulumi/aws": "^5.0.0",
-        "@pulumi/awsx": "^1.0.0",
         "@pulumi/pulumi": "^3.0.0"
     },
     "scripts": {
